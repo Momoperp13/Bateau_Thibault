@@ -1,0 +1,33 @@
+{"produits":
+[{
+    "name":"Saumon",
+    "prix" : "15€",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"L'aile de raie",
+    "prix" : "25€",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Daurade royale",
+    "prix" : "25€",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Poisson4",
+    "prix" : "25€",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Poisson5",
+    "prix" : "25€",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Poisson6",
+    "prix" : "25€",
+    "image":"/assets/images/"
+    }
+  ]
+}
