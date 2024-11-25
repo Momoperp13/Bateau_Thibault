@@ -1,27 +1,73 @@
-#container {
-  text-align: center;
-
+ion-content {
+    --background: url('../../assets/images/home.jpg') no-repeat cover fixed center;
+    background: url('../../assets/images/home.jpg') no-repeat fixed center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+   opacity: 80%;
+}
+//  .background-image {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    z-index: -1;
+//  }
+.contact-button {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+}
+.sc-ion-buttons-md-s .button-has-icon-only.button-clear {
+  width: 100%;
+}
+.sc-ion-buttons-ios-s ion-button:not(.button-round) {
+  color: #979797;
+}
+.size-content {
+  z-index: 10;
+}
+.text-overlay {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+}
+h1 {
+  width: 60%;
+  font-size: 2.3rem;
+  display: flex;
+  text-align: center;
+}
+.text-overlay2 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+app-tab-bar {
+  bottom: 0;
+  width: 100%;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-button {
+  --color: white;
+  border-radius: 10;
 }
-
-#container a {
-  text-decoration: none;
+ion-icon.custom-icon {
+  color: #979797; 
 }
