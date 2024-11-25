@@ -1,0 +1,57 @@
+{"recettes":
+[{
+    "name":"Homar",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+      "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+      "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    },
+    {
+    "name":"St jaques",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+      "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+      "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    },
+    {
+    "name": "Bar",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+      "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+      "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    },
+    {
+    "name": "Tourteau",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+    "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+    "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    },
+    {
+    "name": "Huitres",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+        "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+        "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    },
+    {
+    "name": "Seiche à la plancha",
+    "hint":"Une envie de petits plats chics et colorés, aux fines saveurs iodées ? Ne cherchez plus, le homard est votre allié.",
+    "preparation" : [
+    "Homar : Pour chaque homard, placer la pointe d’un couteau sur la croix à la base de la tête et la trancher en deux. Couper la queue en deux sur la longueur. Retirer les intestins et les parties verdâtres. Les jeter. Retirer la poche de gravier située dans le haut de la tête. La jeter. Poursuivre avec le reste des homards.",
+    "Huile aux herbes : Dans un petit bol, mélanger tous les ingrédients, à l’exception des citrons. Saler et poivrer.  Napper les homards avec la moitié de l’huile aux herbes."
+    ],
+    "image":"/assets/images/"
+    }
+  ]
+}

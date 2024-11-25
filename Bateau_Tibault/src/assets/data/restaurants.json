@@ -1,0 +1,38 @@
+{"restaurants":
+[{
+    "name":"Chasse marée",
+    "presentation" : "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Vin Marée",
+    "presentation" :
+      "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Le Marée",
+    "presentation" :
+      "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Bare à Huitres",
+    "presentation" :
+      "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Viot Poissonnerie",
+    "presentation" :
+      "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    },
+    {
+    "name":"Poisson Chat",
+    "presentation" :
+      "Comme son nom l'indique, la Marée propose une carte avec des produits de la mer : poissons, crustacés et fruits de mer. Mais rassurez-vous, il y a aussi un peu de viande pour ceux qui ne mangent pas de poisson. Pour la Quinzaine Gourmande, c'est le tourteau qui est mis en avant, notamment avec l'entrée “chair de tourteau et rémoulade de céleri au curcuma”.",
+    "image":"/assets/images/"
+    }
+  ]
+}
