@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) ="onGoToRestaurants()">
+      <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-section">
+    <img [src]="restaurant.image" alt="bateau">
+  </div>
+  <div class="boat-name">
+    <h2><strong>{{restaurant.name}}</strong></h2>
+  </div>
+  <div class="owner-name">
+    <h2>Thibault Magasin</h2>
+  </div>
+  <div class="description-section">
+    <p class="description">
+      {{restaurant.presentation}}
+    </p>
+  </div>
+</ion-content>

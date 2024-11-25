@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 import { TabBarComponent } from './tab-bar/tab-bar.component';
 
@@ -13,8 +14,7 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        loadComponent: () =>
-          import('./home/home.page').then((m) => m.HomePage),
+        loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
       },
       {
         path: 'recette',
@@ -39,9 +39,19 @@ export const routes: Routes = [
           import('./produits/produits.page').then((m) => m.ProduitsPage),
       },
     ],
-  },  {
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./contact/contact.page').then((m) => m.ContactPage),
+  },
+  {
     path: 'detail-recette',
     loadComponent: () => import('./detail-recette/detail-recette.page').then( m => m.DetailRecettePage)
+  },
+  {
+    path: 'detail-restaurant',
+    loadComponent: () => import('./detail-restaurant/detail-restaurant.page').then( m => m.DetailRestaurantPage)
   },
 
 ];
