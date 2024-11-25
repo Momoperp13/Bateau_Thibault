@@ -1,13 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">contact</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-buttons>
+    <ion-button (click)="onGoToHome()">
+      <ion-icon src="../../assets/icon/arrow-back.svg" name="back" class="custom-icon"></ion-icon></ion-button>
+  </ion-buttons>
+
+  <div class="contact-header">
+    <ion-avatar>
+      <img src="assets/images/avatar.jpg" alt="Avatar">
+    </ion-avatar>
+    <h2>Le Bateau de Thibault</h2>
+  </div>
+
+  <div class="contact-info">
+    <div class="info-item">
+      <ion-icon class="icon" src="../../assets/icon/call.svg" name="call"></ion-icon>
+      <ion-label class="label">06.63.99.99.78</ion-label>
+    </div>
+    <div class="info-item">
+      <ion-icon class="icon" src="../../assets/icon/mail.svg" name="mail"></ion-icon>
+      <ion-label class="label">lebateaudethibaultagmail.com</ion-label>
+    </div>
+    <div class="info-item">
+      <ion-icon class="icon" src="../../assets/icon/globe.svg" name="globe"></ion-icon>
+      <ion-label class="label">www.facebook.com/lebateaudethibault</ion-label>
+    </div>
+  </div>
 </ion-content>

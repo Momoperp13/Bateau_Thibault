@@ -13,8 +13,7 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        loadComponent: () =>
-          import('./home/home.page').then((m) => m.HomePage),
+        loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
       },
       {
         path: 'recette',
@@ -39,5 +38,10 @@ export const routes: Routes = [
           import('./produits/produits.page').then((m) => m.ProduitsPage),
       },
     ],
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./contact/contact.page').then((m) => m.ContactPage),
   },
 ];

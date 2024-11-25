@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent,IonImg, IonButton,IonButtons,IonIcon } from '@ionic/angular/standalone';
 import  { TabBarComponent } from '../tab-bar/tab-bar.component';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,5 +21,9 @@ import  { TabBarComponent } from '../tab-bar/tab-bar.component';
   ],
 })
 export class HomePage {
-  constructor() {}
+  constructor(private router:Router) {}
+
+  onGoToContact(){
+    this.router.navigate(['/contact']);
+  }
 }
