@@ -53,5 +53,13 @@ export const routes: Routes = [
     path: 'detail-restaurant',
     loadComponent: () => import('./detail-restaurant/detail-restaurant.page').then( m => m.DetailRestaurantPage)
   },
+  {
+    path: 'detail-produit',
+    loadComponent: () => import('./detail-produit/detail-produit.page').then( m => m.DetailProduitPage)
+  },
+  {
+    path: 'panier',
+    loadComponent: () => import('./panier/panier.page').then( m => m.PanierPage)
+  },
 
 ];

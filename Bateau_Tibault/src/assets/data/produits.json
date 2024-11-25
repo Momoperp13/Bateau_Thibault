@@ -1,33 +1,33 @@
 {"produits":
 [{
     "name":"Saumon",
-    "prix" : "15€",
-    "image":"/assets/images/"
+    "prix" : "15",
+    "image":"assets/images/ailederaie.jpeg"
     },
     {
     "name":"L'aile de raie",
-    "prix" : "25€",
-    "image":"/assets/images/"
+    "prix" : "25",
+    "image":"assets/images/ailederaie.jpeg"
     },
     {
     "name":"Daurade royale",
-    "prix" : "25€",
-    "image":"/assets/images/"
+    "prix" : "25",
+    "image":"assets/images/ailederaie.jpeg"
     },
     {
     "name":"Poisson4",
-    "prix" : "25€",
-    "image":"/assets/images/"
+    "prix" : "25",
+    "image":"assets/images/ailederaie.jpeg"
     },
     {
     "name":"Poisson5",
-    "prix" : "25€",
-    "image":"/assets/images/"
+    "prix" : "25",
+    "image":"assets/images/ailederaie.jpeg"
     },
     {
     "name":"Poisson6",
-    "prix" : "25€",
-    "image":"/assets/images/"
+    "prix" : "25",
+    "image":"assets/images/ailederaie.jpeg"
     }
   ]
 }

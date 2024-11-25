@@ -16,12 +16,16 @@ import { RecettesService } from '../services/recettes.service';
 })
 export class RecettesPage implements OnInit {
   recettesList!: Recette[];
+  filteredItems!:Recette[];
+  searchText:String = "";
+  
   constructor(private router:Router, private recettesService:RecettesService) { }
 
   ngOnInit() {
     this.recettesService.getRecettes().subscribe(res=>{
       console.log(res);
       this.recettesList = res.recettes
+      console.log(this.recettesList);
     },
     err =>{
       console.log("error")
@@ -38,5 +42,12 @@ export class RecettesPage implements OnInit {
     };
 
     this.router.navigate(['/detail-recette'],navigationExtras);
+  }
+  filterItems() {
+    this.filteredItems = this.recettesList.filter(recette=>
+      recette.name.toLowerCase().includes(this.searchText.toLowerCase())
+      
+    );
+    console.log(this.filteredItems)
   }
 }

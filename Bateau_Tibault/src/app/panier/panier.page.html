@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon src="../../assets/icon/arrow-back.svg" name="back" class="custom-icon"></ion-icon>
+        <span class="custom-title">Panier</span>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="heart">
+      <ion-button class="spaced-button">
+        <ion-icon class="cart" src="../../assets/icon/heart.svg" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button class="spaced-button">
+        <ion-icon class="cart" src="../../assets/icon/cart.svg" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="date">
+    {{ currentDate}}
+  </div>
+  
+  <!-- Liste des produits -->
+  <!-- <div *ngFor="let product of products" class="product-card"> -->
+    <ion-card>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start" >
+          <img [src]="produit.image" alt="Image du produit" class="image-size"  />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ produit.name }}</h2>
+          <p>Quantité : {{ produit.prix }}</p>
+          <p>Prix unitaire : {{ produit.prix}}</p>
+          <!-- <p>Total : {{ product.quantity * product.price | currency }}</p> -->
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  <!-- </div> -->
+</ion-content>
