@@ -20,23 +20,23 @@
 <ion-content [fullscreen]="true">
 
   <div class="date">
-    {{ currentDate | date: 'MMMM yyyy' }}
+    {{ currentDate}}
   </div>
   
   <!-- Liste des produits -->
-  <div *ngFor="let product of products" class="product-card">
+  <!-- <div *ngFor="let product of products" class="product-card"> -->
     <ion-card>
       <ion-item lines="none">
         <ion-thumbnail slot="start" >
-          <img [src]="product.image" alt="Image du produit" class="image-size"  />
+          <img [src]="produit.image" alt="Image du produit" class="image-size"  />
         </ion-thumbnail>
         <ion-label>
-          <h2>{{ product.name }}</h2>
-          <p>Quantité : {{ product.quantity }}</p>
-          <p>Prix unitaire : {{ product.price | currency }}</p>
-          <p>Total : {{ product.quantity * product.price | currency }}</p>
+          <h2>{{ produit.name }}</h2>
+          <p>Quantité : {{ produit.prix }}</p>
+          <p>Prix unitaire : {{ produit.prix}}</p>
+          <!-- <p>Total : {{ product.quantity * product.price | currency }}</p> -->
         </ion-label>
       </ion-item>
     </ion-card>
-  </div>
+  <!-- </div> -->
 </ion-content>

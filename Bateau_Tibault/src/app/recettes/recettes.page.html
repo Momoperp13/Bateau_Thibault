@@ -1,29 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar slot="start">
-    <h1> recettes</h1>
+
+  <ion-toolbar slot = "start">
+    <h1>recettes</h1>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar  debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
+    <ion-searchbar  [(ngModel)]="searchText" 
+    (ionInput)="filterItems()" debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-grid>
-      <ion-row class="ion-justify-content-between">
-        <!-- Boucle pour afficher 4 cartes -->
-        <ion-col *ngFor="let i of [].constructor(6)" size="6">
-          <ion-item>
-            <ion-card (click)="onCardClick()" button >
-              <img alt="Image" src="assets/images/home.jpg" />
-              <ion-card-header>
-                <ion-card-title>Soupe</ion-card-title>
-                <ion-icon name="add-circle" src="assets/add-circle.svg" class="add-circle"></ion-icon>
-              </ion-card-header>
-            </ion-card>
-          </ion-item>
-        </ion-col>
-      </ion-row>
+
+    <ion-row class ="ion-justify-content-between">
+      @for(recette of filteredItems;track recette.name){
+      <ion-col size ="6">
+      <ion-item>
+        <ion-card (click) = "onLoadRecette(recette)" button>
+          <img alt ="image" class = "custom-image"[src]="recette.image"/>
+          <ion-card-header>
+            <ion-card-title>{{recette.name}}</ion-card-title>
+            <ion-icon name="add-circle" src = "assets/icon/add-circle.svg" class ="add-circle"></ion-icon>
+          </ion-card-header>
+        </ion-card>   
+      </ion-item>
+      </ion-col>
+      }
+    </ion-row>
     </ion-grid>
   </ion-list>
 </ion-content>
