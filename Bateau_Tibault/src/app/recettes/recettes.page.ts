@@ -25,7 +25,7 @@ export class RecettesPage implements OnInit {
     this.recettesService.getRecettes().subscribe(res=>{
       console.log(res);
       this.recettesList = res.recettes
-      console.log(this.recettesList);
+      this.filteredItems = res.recettes
     },
     err =>{
       console.log("error")
