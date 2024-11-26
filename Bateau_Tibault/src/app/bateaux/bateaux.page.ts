@@ -39,28 +39,7 @@ import {
 })
 export class BateauxPage implements OnInit {
   constructor() {}
-  currentDate: Date = new Date();
 
-  products = [
-    {
-      name: 'Produit 1',
-      image: 'assets/images/daurade.jpg',
-      quantity: 2,
-      price: 20.0,
-    },
-    {
-      name: 'Produit 2',
-      image: 'assets/images/daurade.jpg',
-      quantity: 1,
-      price: 15.5,
-    },
-    {
-      name: 'Produit 3',
-      image: 'assets/images/daurade.jpg',
-      quantity: 3,
-      price: 10.0,
-    },
-  ];
 
   ngOnInit() {}
 }
