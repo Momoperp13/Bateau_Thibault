@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
 import { NavigationExtras, Router } from '@angular/router';
 import { Recette } from '../models/recettes';
@@ -51,3 +52,5 @@ export class RecettesPage implements OnInit {
     console.log(this.filteredItems)
   }
 }
+
+

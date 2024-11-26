@@ -1,4 +1,5 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar slot = "start">
     <h1>recettes</h1>
   </ion-toolbar>
@@ -11,6 +12,7 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-grid>
+
     <ion-row class ="ion-justify-content-between">
       @for(recette of filteredItems;track recette.name){
       <ion-col size ="6">

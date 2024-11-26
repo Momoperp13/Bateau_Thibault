@@ -46,7 +46,11 @@ export const routes: Routes = [
       import('./contact/contact.page').then((m) => m.ContactPage),
   },
   {
-    path: 'detail-recette',
+    path: 'bateau-detail',
+    loadComponent: () => import('./bateau-detail/bateau-detail.page').then( (m)=> m.BateauDetailPage),
+  },
+    {
+      path: 'detail-recette',
     loadComponent: () => import('./detail-recette/detail-recette.page').then( m => m.DetailRecettePage)
   },
   {
