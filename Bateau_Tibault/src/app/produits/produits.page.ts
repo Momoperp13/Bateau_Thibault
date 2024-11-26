@@ -41,3 +41,6 @@ export class ProduitsPage implements OnInit {
     this.router.navigate(['/detail-produit'],navigationExtras);
   }
 }
+
+
+

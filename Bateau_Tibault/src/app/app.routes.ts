@@ -45,10 +45,6 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./contact/contact.page').then((m) => m.ContactPage),
   },
-  {
-    path: 'bateau-detail',
-    loadComponent: () => import('./bateau-detail/bateau-detail.page').then( (m)=> m.BateauDetailPage),
-  },
     {
       path: 'detail-recette',
     loadComponent: () => import('./detail-recette/detail-recette.page').then( m => m.DetailRecettePage)
@@ -64,6 +60,10 @@ export const routes: Routes = [
   {
     path: 'panier',
     loadComponent: () => import('./panier/panier.page').then( m => m.PanierPage)
+  },
+  {
+    path: 'bateau-detail',
+    loadComponent: () => import('./bateau-detail/bateau-detail.page').then( m => m.BateauDetailPage)
   },
 
 ];

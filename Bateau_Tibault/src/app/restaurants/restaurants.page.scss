@@ -3,7 +3,7 @@ ion-header {
   }
   
   ion-toolbar {
-    --background: #90CAF9; /* Applique le bleu clair à la barre d'outils */  
+    --background: #90CAF9;
   }
   ion-searchbar{
     background: white;
@@ -20,7 +20,7 @@ ion-header {
     --background: white;
   }
   ion-item{
-    --background: white;
+    --background: #f8f8f8;
     margin-left: -25px;
     margin-right: -25px;
     margin-top: -25px;
@@ -28,18 +28,50 @@ ion-header {
   }
   ion-row{
     --background: white;
+
   }
   ion-card-header{
     --background: white;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+  height: 150px;
+  position: relative;
   }
-  ion-card-title{
+  ion-icon.add-circle {
+    margin-top: -5px; 
+    font-size: 30px;
     color: black;
+    position: absolute;
+  bottom: 40px;
   }
-  ion-col{
-    --background: white;
+  ion-card-title {
+    color: black;
+    font-size: 16px;
+    margin-top: -35px;
+    margin-bottom: 40px;
+  line-height: 1.2; 
+  max-height: 72px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
   }
-  ion-card{
+  ion-col {
     --background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ion-card {
+    --background: white;
+    width: 180px;
+    height: 300px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+    margin: 20px;
+
   }
   ion-grid{
     --background: white;
@@ -47,7 +79,19 @@ ion-header {
   ion-list{
     --background: white;
   }
-  .custom-image{
+  ion-icon{
+    margin-left: 90px;
+
+
+  }
+  .custom-image {
     height: 150px;
-    width: 150px;
+    width: 180px;
+    object-fit: cover; 
+    border-radius: 10px;
+    
+  }
+
+  h1{
+    margin-left: 20px;
   }

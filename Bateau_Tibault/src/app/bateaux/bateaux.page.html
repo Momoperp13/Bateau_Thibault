@@ -1,42 +1,30 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon src="../../assets/icon/arrow-back.svg" name="back" class="custom-icon"></ion-icon>
-        <span class="custom-title">Panier</span>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end" class="heart">
-      <ion-button class="spaced-button">
-        <ion-icon class="cart" src="../../assets/icon/heart.svg" name="heart"></ion-icon>
-      </ion-button>
-      <ion-button class="spaced-button">
-        <ion-icon class="cart" src="../../assets/icon/cart.svg" name="cart"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <h1 >Bateaux</h1>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar  debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-  <div class="date">
-    {{ currentDate | date: 'MMMM yyyy' }}
-  </div>
-  
-  <!-- Liste des produits -->
-  <div *ngFor="let product of products" class="product-card">
-    <ion-card>
-      <ion-item lines="none">
-        <ion-thumbnail slot="start" >
-          <img [src]="product.image" alt="Image du produit" class="image-size"  />
-        </ion-thumbnail>
-        <ion-label>
-          <h2>{{ product.name }}</h2>
-          <p>Quantité : {{ product.quantity }}</p>
-          <p>Prix unitaire : {{ product.price | currency }}</p>
-          <p>Total : {{ product.quantity * product.price | currency }}</p>
-        </ion-label>
+  <ion-list>
+    <ion-grid>
+    <ion-row class ="ion-justify-content-between">
+      @for(bateau of bateauxList;track bateau.name){
+      <ion-col size ="6">
+      <ion-item>
+        <ion-card (click) = "onLoadBateau(bateau)" button>
+          <img alt ="image" class = "custom-image" [src]="bateau.image"/>
+          <ion-card-header>
+            <ion-card-title><h2>{{bateau.name}}</h2></ion-card-title>
+            <ion-icon name="add-circle" src = "assets/icon/add-circle.svg" class ="add-circle"></ion-icon>
+          </ion-card-header>
+        </ion-card>   
       </ion-item>
-    </ion-card>
-  </div>
+      </ion-col>
+      }
+    </ion-row>
+    </ion-grid>
+  </ion-list>
 </ion-content>

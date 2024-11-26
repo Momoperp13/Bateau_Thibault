@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar slot = "start">
-    <h1>produits</h1>
+  <ion-toolbar>
+    <h1>Produits</h1>
   </ion-toolbar>
   <ion-toolbar>
     <ion-searchbar  debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
@@ -17,7 +17,7 @@
         <ion-card>
           <img alt ="image" class = "custom-image" [src]="produit.image"/>
           <ion-card-header>
-            <ion-card-title>{{produit.name}}</ion-card-title>
+            <ion-card-title><h3>{{produit.name}}</h3></ion-card-title>
           </ion-card-header>
             <ion-item lines ="none">
                 <button (click) = "onLoadProduit(produit)" class="btnacheter">Acheter</button>

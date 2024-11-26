@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
 import { NavigationExtras, Router } from '@angular/router';
 import { Recette } from '../models/recettes';
@@ -26,7 +25,7 @@ export class RecettesPage implements OnInit {
     this.recettesService.getRecettes().subscribe(res=>{
       console.log(res);
       this.recettesList = res.recettes
-      console.log(this.recettesList);
+      this.filteredItems = res.recettes
     },
     err =>{
       console.log("error")
@@ -52,5 +51,4 @@ export class RecettesPage implements OnInit {
     console.log(this.filteredItems)
   }
 }
-
 
