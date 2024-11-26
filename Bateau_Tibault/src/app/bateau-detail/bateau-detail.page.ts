@@ -5,13 +5,13 @@ import {IonLabel,IonItem,IonIcon,IonBackButton, IonButtons,IonContent, IonHeader
 import { StatusBar } from '@capacitor/status-bar';
 
 @Component({
-  selector: 'app-produits',
-  templateUrl: './produits.page.html',
-  styleUrls: ['./produits.page.scss'],
+  selector: 'app-bateau-detail',
+  templateUrl: './bateau-detail.Page.html',
+  styleUrls: ['./bateau-detail.Page.scss'],
   standalone: true,
   imports: [IonLabel,IonItem,IonIcon,IonBackButton,IonButtons,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class ProduitsPage implements OnInit {
+export class BateauDetailPage implements OnInit {
 
   constructor() { 
     this.initializeApp();
@@ -25,4 +25,3 @@ export class ProduitsPage implements OnInit {
   }
 
 }
-

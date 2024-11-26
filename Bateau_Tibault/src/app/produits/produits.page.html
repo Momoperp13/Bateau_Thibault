@@ -1,26 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <!-- Bouton de retour à gauche -->
-    <ion-buttons slot="start">
-      <ion-icon src="../../assets/icon/arrow-back-outline.svg" name="back" size="large"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="image-section">
-    <img src="./assets/images/bateau_1.jpg" alt="bateau 1">
-  </div>
-  <div class="boat-name">
-    <h2><strong>Pionner</strong></h2>
-  </div>
-  <div class="owner-name">
-    <h3>Thibault Magasin</h3>
-  </div>
-
-  <div class="description-section">
-    <p class="description">
-      Voici la description détaillée du bateau. Ce bateau est idéal pour des excursions en mer avec des caractéristiques exceptionnelles comme une coque renforcée, une capacité d'accueil de 8 personnes et des équipements modernes pour le confort des passagers.
-    </p>
-  </div>
-</ion-content>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>produits</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">produits</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </ion-content>
