@@ -1,13 +1,62 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>detail-produit</ion-title>
+    <ion-buttons slot="start" (click)="onGoToBateau()">
+      <ion-icon src="assets/icon/arrow-back.svg" class="custom-icon" name="arrow-back" size="large"></ion-icon>
+      <span class="costum-title"><h3>Achat de produit</h3></span>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detail-produit</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="page-content">
+  <div class="product-container">
+    <!-- Image -->
+    <img [src]="produit.image" alt="produit" class="product-image">
+
+    <!-- Informations -->
+    <div class="product-info">
+      <h2 class="product-name"><strong>{{produit.name}}</strong></h2>
+      <h2 class="product-price"><strong>{{produit.prix}} €</strong></h2>
+
+      <!-- Gestion de la quantité -->
+      <div class="quantity-control">
+        <ion-item lines="none">
+          <ion-label position="floating">Qty :</ion-label>
+          <ion-input [(ngModel)]="quantite" placeholder="0" readonly></ion-input> <!-- Lier la valeur avec ngModel -->
+        </ion-item>
+        <ion-item lines="none">
+          <ion-button class="add-button" (click)="addQuantite()">
+            <ion-icon name="add-circle" src="assets/icon/add-circle.svg"></ion-icon>
+          </ion-button>
+          <ion-button class="remove-button" (click)="removeQuantite()">
+            <ion-icon name="remove-circle" src="assets/icon/remove-circle.svg"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+
+  <!-- Détail Prix -->
+  <div class="detail-prix-container">
+    <h3 class="detail-title">Détail prix</h3>
+    <div class="detail-row">
+      <span class="detail-label">Prix unitaire</span>
+      <span class="detail-value">{{produit.prix}} €</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Livraison gratuite</span>
+      <span class="detail-value">Info</span>
+    </div>
+  </div>
+  <div class="total-container">
+    <div class="detail-row">
+      <span class="detail-label"><strong>Total</strong></span>
+      <span class="detail-value">{{calculerTotal()}} €</span> <!-- Affiche le total calculé -->
+    </div>
+  </div>
+  <div class="button-container">
+    <ion-button expand="block" class="custom-button" (click)="onGoToPanier()">Ajouter au panier</ion-button>
+  </div>
+  
 </ion-content>
+
+

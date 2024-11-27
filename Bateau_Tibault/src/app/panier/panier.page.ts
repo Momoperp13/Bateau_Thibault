@@ -14,13 +14,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PanierPage implements OnInit {
 
-  currentDate: Date = new Date();
-  produit!:{
-    name : String,
-    prix:number,
-    image:String
-  }
-  constructor(private route:ActivatedRoute, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
     

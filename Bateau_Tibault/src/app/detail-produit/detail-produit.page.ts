@@ -1,20 +1,69 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {IonThumbnail,IonCard,IonButton,IonInput,IonLabel,IonItem,IonIcon,IonBackButton, IonButtons,IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
+// import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-detail-produit',
   templateUrl: './detail-produit.page.html',
   styleUrls: ['./detail-produit.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonThumbnail,IonCard,IonButton,IonInput,IonLabel,IonItem,IonIcon,IonBackButton,IonButtons,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class DetailProduitPage implements OnInit {
-
-  constructor() { }
-
+  produit!:{
+    id:number,
+    name : String,
+    presentation : String[],
+    prix:number
+    image:String
+  }
+  quantite:number=1;
+  constructor(private route:ActivatedRoute, private router: Router) { 
+  }
+  onGoToBateau(){
+    this.router.navigate(['/Produit'])}
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if(this.router.getCurrentNavigation()?.extras.state){
+        this.produit = this.router.getCurrentNavigation()?.extras.state?.['produit'];
+      }
+    })
+  }
+  addQuantite(){
+    this.quantite+=1;
+  }
+  removeQuantite(){
+    if (this.quantite > 0) {
+      this.quantite -= 1;
+    }
+  }
+  calculerTotal(): number {
+    return this.quantite * this.produit.prix;
   }
 
+  addToCart(produit: any) {
+    const productToAdd = {
+      id: produit.id,
+      name: produit.name,
+      prix: produit.prix,
+      quantite: produit.quantite,
+    };
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  cart.push(productToAdd);
+
+  // Mettre à jour le localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+  console.log('Produit ajouté au panier', productToAdd);
+
+  }
+
+ onGoToPanier(){
+  this.addToCart(this.produit);
+  // this.router.navigate(['/panier']);
+ }
 }
+

@@ -9,7 +9,7 @@
     "id": 9,
     "name": "Araignées",
     "prix": "7",
-    "image": "/assets/images/araignee.jpeg"
+    "image": "/assets/images/01.jpg"
   },
   {
     "id": 3,
@@ -33,11 +33,11 @@
     "id": 5,
     "name": "Filet Julienne",
     "prix": "19",
-    "image": "/assets/images/filet-julienne.jpeg"
+    "image": "/assets/images/02.jpg"
   },
   {
     "id": 8,
-    "name": "Huitres N°2 St Vaast",
+    "name": "Huitres St Vaast",
     "prix": "38",
     "image": "/assets/images/huitres-n02.jpeg"
   },

@@ -19,11 +19,10 @@
           <ion-card-header>
             <ion-card-title><h3>{{produit.name}}</h3></ion-card-title>
           </ion-card-header>
-            <ion-item lines ="none">
-                <button (click) = "onLoadProduit(produit)" class="btnacheter">Acheter</button>
-                {{produit.prix}}€
-            </ion-item>
-          
+          <div class="button-prix-container">
+            <button (click)="onLoadProduit(produit)" class="btnacheter">Acheter</button>
+            <span class="prix">{{produit.prix}}€</span>
+          </div>
         </ion-card>   
       </ion-item>
       </ion-col>
