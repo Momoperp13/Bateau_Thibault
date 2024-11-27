@@ -9,6 +9,7 @@ import {IonicStorageModule} from '@ionic/storage-angular';
 import {Drivers} from '@ionic/storage';
 import { importProvidersFrom } from '@angular/core';
 
+
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

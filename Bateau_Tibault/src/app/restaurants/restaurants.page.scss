@@ -4,6 +4,7 @@ ion-header {
   
   ion-toolbar {
     --background: #90CAF9;
+     color: white;
   }
   ion-searchbar{
     background: white;
@@ -26,6 +27,7 @@ ion-header {
     margin-top: -25px;
     margin-bottom: -25px;
   }
+
   ion-row{
     --background: white;
 
@@ -94,4 +96,6 @@ ion-header {
 
   h1{
     margin-left: 20px;
+      color: white;
   }
+  

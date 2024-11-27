@@ -15,7 +15,7 @@
       @for(restaurant of filteredItems;track restaurant.name){
       <ion-col size ="6">
       <ion-item>
-        <ion-card (click) = "onLoadRestaurant(restaurant)" button>
+        <ion-card (click) = "onLoadRestaurant(restaurant)" button  class="button">
           <img alt ="image" class = "custom-image" [src]="restaurant.image"/>
           <ion-card-header>
             <ion-card-title><h2>{{restaurant.name}}</h2></ion-card-title>

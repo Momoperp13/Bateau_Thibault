@@ -3,16 +3,22 @@
     <ion-buttons slot="start" (click) ="onGoToAchat()">
       <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
     </ion-buttons>
-    <h1>formulaire</h1>
+    <h1>Informations livraison</h1>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit(formulaire)">
     <!-- Champ pour le nom -->
     <ion-item>
       <ion-label  position="floating">Nom</ion-label>
       <ion-input  [(ngModel)]="formulaire.nom" name="nom" required></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le numéro de rue -->
+    <ion-item>
+      <ion-label position="floating">Numéro de rue</ion-label>
+      <ion-input  [(ngModel)]="formulaire.numero" name="numero"  required></ion-input>
     </ion-item>
 
     <!-- Champ pour la rue -->

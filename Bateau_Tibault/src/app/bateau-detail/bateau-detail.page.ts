@@ -6,8 +6,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bateau-detail',
-  templateUrl: './bateau-detail.Page.html',
-  styleUrls: ['./bateau-detail.Page.scss'],
+  templateUrl: './bateau-detail.page.html',
+  styleUrls: ['./bateau-detail.page.scss'],
   standalone: true,
   imports: [IonLabel,IonItem,IonIcon,IonBackButton,IonButtons,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })

@@ -57,6 +57,7 @@ import { NavigationExtras, Router } from '@angular/router';
   ],
 })
 export class BateauxPage implements OnInit {
+
   bateauxList!: Bateau[];
   filteredItems!:Bateau[];
   searchText:String = "";
@@ -85,6 +86,7 @@ export class BateauxPage implements OnInit {
 
     this.router.navigate(['/bateau-detail'],navigationExtras);
   }
+
   filterItems() {
     this.filteredItems = this.bateauxList.filter(bateau=>
       bateau.name.toLowerCase().includes(this.searchText.toLowerCase())

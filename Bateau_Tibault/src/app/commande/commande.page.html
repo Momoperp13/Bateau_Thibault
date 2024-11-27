@@ -1,13 +1,61 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>commande</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <h1 class="custom-title">Confirmation Commande</h1>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="heart">
+      <ion-button class="spaced-button">
+        <ion-icon class="cart" src="../../assets/icon/heart.svg" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button class="spaced-button">
+        <ion-icon class="cart" src="../../assets/icon/cart.svg" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">commande</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="date">
+    {{ currentDate | date: 'd MMMM y'}}
+  </div>
+  <div *ngFor="let product of products " class="product-card">
+    <ion-card>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img [src]="product.image" alt="Image du produit" class="image-size" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ product.name }}</h2>
+          <p>{{ product.quantity }} unité</p>
+          <p>Prix unitaire : {{ product.price}} €</p>
+          <p>Total : {{ product.quantity * product.price}} €</p>
+        </ion-label>
+        <div class="card-buttons">
+        </div>
+      </ion-item>
+    </ion-card>
+  </div>
+  <div class="product-card">
+    <p>Total : {{ total}} €</p>
+  </div>
+  <div class="product-card">
+    <ion-item lines ="none">
+      <ion-icon src="../../assets/icon/home.svg" name="home"></ion-icon>
+      <p>Adresse de livraison : {{formulaire.numero}} {{formulaire.rue}} {{formulaire.ville}} {{formulaire.code_postale}} {{formulaire.pays}}</p>
+    </ion-item>
+    <ion-item lines ="none">
+      <ion-icon src="../../assets/icon/home.svg" name="home"></ion-icon>
+      <p>date de livraison : </p>
+    </ion-item>
+    
+  </div>
+
+  <div class="button-container">
+    <ion-button expand="block" class="custom-button">
+      Envoyer la commande
+    </ion-button>
+  </div>
 </ion-content>

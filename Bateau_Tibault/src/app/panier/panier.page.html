@@ -2,8 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
-        <ion-icon src="../../assets/icon/arrow-back.svg" name="back" class="custom-icon"></ion-icon>
-        <span class="custom-title">Panier</span>
+        <h1 class="custom-title">Panier</h1>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end" class="heart">
@@ -20,23 +19,31 @@
 <ion-content [fullscreen]="true">
 
   <div class="date">
-    {{ currentDate}}
+    {{ currentDate | date: 'd MMMM y'}}
   </div>
-  
-  <!-- Liste des produits -->
-  <!-- <div *ngFor="let product of products" class="product-card"> -->
+  <div *ngFor="let product of products " class="product-card">
     <ion-card>
       <ion-item lines="none">
-        <ion-thumbnail slot="start" >
-          <img [src]="produit.image" alt="Image du produit" class="image-size"  />
+        <ion-thumbnail slot="start">
+          <img [src]="product.image" alt="Image du produit" class="image-size" />
         </ion-thumbnail>
         <ion-label>
-          <h2>{{ produit.name }}</h2>
-          <p>Quantité : {{ produit.prix }}</p>
-          <p>Prix unitaire : {{ produit.prix}}</p>
-          <!-- <p>Total : {{ product.quantity * product.price | currency }}</p> -->
+          <h2>{{ product.name }}</h2>
+          <p>{{ product.quantite }} unité</p>
+          <p>Prix unitaire : {{ product.prix}} €</p>
+          <p>Total : {{ product.quantite * product.prix}} €</p>
         </ion-label>
+        <div class="card-buttons">
+          <ion-button class="button-edit" size="small" expand="block" (click)="onGoToproduitDetail()">Modifier</ion-button>
+          <ion-button color="danger" size="small" expand="block">Supprimer</ion-button>
+        </div>
       </ion-item>
     </ion-card>
-  <!-- </div> -->
+  </div>
+
+  <div class="button-container">
+    <ion-button expand="block" class="custom-button">
+      Valider le panier
+    </ion-button>
+  </div>
 </ion-content>
