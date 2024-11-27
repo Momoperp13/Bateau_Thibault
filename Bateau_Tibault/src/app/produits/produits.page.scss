@@ -1,0 +1,96 @@
+ion-header {
+  background-color: #90CAF9; /* Bleu clair */
+}
+
+ion-toolbar {
+  --background: #90CAF9;
+  color: white;
+}
+ion-searchbar{
+  background: white;
+  width: 400px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 2px;
+  color: gray;
+
+}
+ion-content{
+  --background: white;
+}
+ion-item{
+  
+  --background: #f8f8f8;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+ion-row{
+  --background: white;
+
+}
+ion-card-header{
+  --background: white;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+height: 150px;
+position: relative;
+}
+ion-icon.add-circle {
+  margin-top: -5px; 
+  font-size: 30px;
+  color: black;
+  position: absolute;
+bottom: 40px;
+}
+ion-card-title {
+  color: black;
+  font-size: 16px;
+  margin-top: -35px;
+  margin-bottom: 40px;
+line-height: 1.2; 
+max-height: 72px;
+overflow: hidden; 
+text-overflow: ellipsis;
+}
+ion-col {
+  --background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-card {
+  --background: white;
+  width: 180px;
+  height: 300px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center;
+  margin: 20px;
+
+}
+ion-grid{
+  --background: white;
+}
+ion-list{
+  --background: white;
+}
+
+.custom-image {
+  height: 150px;
+  width: 180px;
+  object-fit: cover; 
+  border-radius: 10px;
+  
+}
+
+h1{
+  margin-left: 20px;
+    color: white;
+}

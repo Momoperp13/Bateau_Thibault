@@ -2,8 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
-        <ion-icon src="../../assets/icon/arrow-back.svg" name="back" class="custom-icon"></ion-icon>
-        <span class="custom-title">Panier</span>
+        <h1 class="custom-title">Panier</h1>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end" class="heart">
@@ -20,9 +19,9 @@
 <ion-content [fullscreen]="true">
 
   <div class="date">
-    {{ currentDate | date: 'MMMM yyyy' }}
+    {{ currentDate | date: 'd MMMM y'}}
   </div>
-  <div *ngFor="let product of products" class="product-card">
+  <div *ngFor="let product of products " class="product-card">
     <ion-card>
       <ion-item lines="none">
         <ion-thumbnail slot="start">
@@ -30,10 +29,14 @@
         </ion-thumbnail>
         <ion-label>
           <h2>{{ product.name }}</h2>
-          <p>{{ product.quantity }} unité</p>
-          <p>Prix unitaire : {{ product.price}} €</p>
-          <p>Total : {{ product.quantity * product.price}} €</p>
+          <p>{{ product.quantite }} unité</p>
+          <p>Prix unitaire : {{ product.prix}} €</p>
+          <p>Total : {{ product.quantite * product.prix}} €</p>
         </ion-label>
+        <div class="card-buttons">
+          <ion-button class="button-edit" size="small" expand="block" (click)="onGoToproduitDetail()">Modifier</ion-button>
+          <ion-button color="danger" size="small" expand="block">Supprimer</ion-button>
+        </div>
       </ion-item>
     </ion-card>
   </div>

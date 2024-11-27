@@ -1,0 +1,86 @@
+ion-header {
+    --background: #90CAF9;
+  }
+  
+  ion-toolbar {
+    --background: #90CAF9;
+  }
+  
+  ion-title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+ion-content {
+    --background: #f0f0f0;
+    padding: 20px;
+    display: flex;             
+    flex-direction: column;
+    height: 100%;          
+}
+.custom-icon{
+  color: white;
+  margin-top: 20px;
+}
+ion-item {
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .boat-name{
+    background-color: white;
+    color: black;
+    margin-bottom: 5px;
+    margin-top: -40px;
+    padding: 15px;
+
+  }
+  .owner-name {
+    background-color: white;
+    color: black;
+    margin-bottom: px;
+    padding: 20px;
+  }
+  .description-section {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+  }
+  .image-section {
+    background-color: white;
+    color: black;
+    margin-bottom: 25px;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+ 
+  .description-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding:  80px;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  ion-content {
+    padding: 0 10px;
+  }

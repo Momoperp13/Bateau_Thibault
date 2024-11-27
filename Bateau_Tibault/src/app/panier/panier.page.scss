@@ -38,6 +38,7 @@ ion-content {
 
 .product-card {
   margin-bottom: 1rem;
+  margin-top: -10px;
 }
 
 ion-card {
@@ -45,11 +46,6 @@ ion-card {
   border-radius: 10px;
 }
 
-ion-thumbnail img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
 
 ion-label h2 {
   font-size: 1.1rem;
@@ -62,10 +58,12 @@ ion-label p {
   font-size: 0.9rem;
   color: #666;
 }
-ion-thumbnail[_ngcontent-ng-c1587720214] img[_ngcontent-ng-c1587720214] {
-  width: 70px;
-  height: 70px;
+img{
+  height: 60px;
+ max-width: 60px;
+
 }
+
 .date {
   color: #90caf9;
   text-align: left;
@@ -94,4 +92,19 @@ ion-thumbnail[_ngcontent-ng-c1587720214] img[_ngcontent-ng-c1587720214] {
   --padding: 1rem; 
   font-size: 1.2rem; 
   text-align: center;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column; /* Empile les boutons verticalement */
+  gap: 8px; /* Espace entre les boutons */
+  margin-left: 16px;
+}
+
+.card-buttons ion-button {
+  width: 100px; /* Largeur fixe pour uniformité */
+  border-radius: 10px; /* Coins arrondis */
+}
+.button-edit{
+  --background: #90caf9;
 }

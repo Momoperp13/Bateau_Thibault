@@ -13,7 +13,18 @@ import {
   IonItem,
   IonLabel,
   IonThumbnail,
+  IonSearchbar,
+  IonList,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCardHeader,
+  IonCardTitle,
+
 } from '@ionic/angular/standalone';
+import { Bateau } from '../models/bateaux';
+import { BateauService } from '../services/bateau.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 
 @Component({
@@ -35,11 +46,42 @@ import {
     IonItem,
     IonLabel,
     IonThumbnail,
+    IonSearchbar,
+    IonList,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCardHeader,
+    IonCardTitle,
+
   ],
 })
 export class BateauxPage implements OnInit {
-  constructor() {}
+
+  bateauxList!: Bateau[];
+  constructor(private router:Router, private bateauService:BateauService) {}
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bateauService.getBateaux().subscribe(res=>{
+      console.log(res);
+      this.bateauxList = res.bateau
+    },
+    err =>{
+      console.log("error")
+    }
+    );
+  }
+  onLoadBateau(bateau:{name:String, presentation : String [], image:String}){
+    
+    let navigationExtras: NavigationExtras = {
+      state:{
+        bateau:bateau
+        
+      }
+    };
+
+    this.router.navigate(['/bateau-detail'],navigationExtras);
+  }
+
 }

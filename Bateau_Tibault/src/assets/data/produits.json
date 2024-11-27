@@ -1,88 +1,64 @@
-{
-  "produits": [
-    {
-      "id": 12,
-      "name": "Aile de raie",
-      "prix": "10",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 9,
-      "name": "Araignées",
-      "prix": "7",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 3,
-      "name": "Bar de ligne",
-      "prix": "25",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 2,
-      "name": "Bar de ligne portion",
-      "prix": "10",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 10,
-      "name": "Filet Bar de ligne",
-      "prix": "7",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 5,
-      "name": "Filet Julienne",
-      "prix": "19",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 7,
-      "name": "Huitres N°2 St Vaast",
-      "prix": "9.5",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 8,
-      "name": "Huitres N°2 St Vaast",
-      "prix": "38",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 13,
-      "name": "Huîtres N°2 OR St Vaast",
-      "prix": "12",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 14,
-      "name": "Huîtres N°2 OR St Vaast",
-      "prix": "24",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 15,
-      "name": "Huîtres N°2 OR St Vaast",
-      "prix": "48",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 4,
-      "name": "Lieu jaune de ligne",
-      "prix": "12",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 4,
-      "name": "Lieu jaune de ligne",
-      "prix": "12",
-      "image": "/assets/images/"
-    },
-    {
-      "id": 6,
-      "name": "Moules de pêche",
-      "prix": "7",
-      "image": "/assets/images/"
-    }
-  ]
+
+{"produits": [
+  {
+    "id": 12,
+    "name": "Aile de raie",
+    "prix": "10",
+    "image": "/assets/images/laile-de-raie.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Araignées",
+    "prix": "7",
+    "image": "/assets/images/araignee.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Bar de ligne",
+    "prix": "25",
+    "image": "/assets/images/bar-de-ligne.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Bar de ligne portion",
+    "prix": "10",
+    "image": "/assets/images/bar-de-ligne-portion.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Filet Bar de ligne",
+    "prix": "7",
+    "image": "/assets/images/filet-bar-de-ligne.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Filet Julienne",
+    "prix": "19",
+    "image": "/assets/images/filet-julienne.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Huitres N°2 St Vaast",
+    "prix": "38",
+    "image": "/assets/images/huitres-n02.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Lieu jaune de ligne",
+    "prix": "12",
+    "image": "/assets/images/lieu-jaune-de-ligne.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Moules de pêche",
+    "prix": "7",
+    "image": "/assets/images/moules-de-peche.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bouquets cuits",
+    "prix": "12",
+    "image": "/assets/images/bouquets-cuits.jpeg"
+  }
+]
 }

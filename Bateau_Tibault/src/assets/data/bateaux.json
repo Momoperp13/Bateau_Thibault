@@ -1,50 +1,50 @@
-{"bateaux":
+{"bateau":
 [{
     "name":"De la brise",
     "presentation" : "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_1.jpg"
     },
     {
     "name":"Sephir",
     "presentation" :
       "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_2.jpg"
     },
     {
     "name":"Pionner",
     "presentation" :
       "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_3.jpg"
     },
     {
     "name":"Gast Micher",
     "presentation" :
       "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_4.jpg"
     },
     {
     "name":"Carpe Diem",
     "presentation" :
       "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_5.jpg"
     },
     {
     "name":"Albatros",
     "presentation" :
       "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_6.jpg"
     },
     {
     "name":"Orion",
     "presentation" :
     "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_7.jpg"
     },
     {
     "name":"Sirius",
     "presentation" :
     "Qu’il est chuand le soleil. Quand nous sommes en vacances Y a d’la joie, des hirondelles. C’est le sud de la France. Papa bricole au garage. Maman lit dans la chaise longue. Dans ce joli paysage. Moi, je me balade en tongs.",
-    "image":"/assets/images/"
+    "image":"/assets/images/bateau_8.jpg"
     }
   ]
 }
