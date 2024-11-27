@@ -115,4 +115,50 @@ h1{
   color: black;
   font-weight: bold;
 }
+.promotion {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Permet à l'enfant d'utiliser un positionnement absolu */
+}
 
+.promotion-image {
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  filter: brightness(60%);
+}
+.popular{
+  margin-left: 40px;
+  color: black;
+}
+.new_promotion{
+  position: absolute;
+  color: white; 
+  font-size: 28px;
+  top: 30%; 
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.voir{
+  position: absolute;
+  background: transparent;
+  width: 200px;
+  border-radius: 20px ;
+  height: 45px;
+  color: white; 
+  font-size: 28px;
+  top: 60%; 
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  border: 2px solid white;
+
+}
