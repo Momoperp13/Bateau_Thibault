@@ -1,39 +1,185 @@
 ion-header {
-  --background: #90CAF9;
+    --background: #90CAF9;
+  }
+  
+  ion-toolbar {
+    --background: #90CAF9;
+    height: 80px;
+  }
+  .page-content {
+    background: white;
+    padding: 0;
+    display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
+  .costum-title{
+    margin-left: 10px;
+    margin-top: -5px;
+    padding: 10px;
+  }
+  .custom-icon{
+    margin-top: 20px;
+    
+  }
+  .product-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .product-image {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: -20px;
+  }
+  .product-name {
+    color: black; /* Définit la couleur du texte en noir */
+    font-size: 20px; /* Ajuste la taille pour plus de visibilité */
+    font-weight: bold; /* Garde le texte en gras */
+    margin-bottom: -70px;
+    padding-top: 30px;
+  }
+  
+.product-price {
+  color: #90CAF9;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 80px;
 }
 
-ion-toolbar {
-  --background: #90CAF9;
-}
-.page-content {
-  background: white; /* Fond blanc pour tout l'ion-content */
-  padding: 0; /* Supprime les marges internes */
-}
-
-.product-container {
-  display: flex; /* Organise en ligne */
-  align-items: center; /* Centre verticalement */
-  gap: 15px; /* Espacement entre l'image et les infos */
-  padding: 15px; /* Espacement interne */
-  background-color: white; /* Fond blanc spécifique pour le conteneur produit */
-  border-radius: 10px; /* Coins arrondis (optionnel) */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet élégant */
-}
-
-.product-image {
-  width: 150px; /* Largeur fixe pour l'image */
-  height: 150px; /* Hauteur fixe */
-  object-fit: cover; /* Ajuste l'image sans déformation */
-  border-radius: 10px; /* Coins arrondis */
-}
-
-.product-info {
+.quantity-control ion-item {
   display: flex;
-  flex-direction: column; /* Les infos sont empilées */
-  gap: 10px; /* Espacement entre le nom et le prix */
+  align-items: center; /* Aligne verticalement tous les éléments */
+  justify-content: flex-start; /* Aligne horizontalement les éléments au début */
+  --background: transparent;
+  padding: 5px 0; /* Réduit les espaces verticaux autour */
+  gap: 5px;
+  margin-top: -10px;
 }
 
-.product-name, .product-price {
-  margin: 0; /* Supprime les marges par défaut */
-  color: #333; /* Couleur du texte */
+.quantity-control ion-label {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: -10px;
+  margin-top: 50px;/* Ajoute un espace à droite du label */
 }
+
+.quantity-control ion-input {
+  color: black;
+  width: 50px; 
+  text-align: center; /* Centre le texte dans l'input */
+  margin-top: -20px;
+}
+
+.quantity-control ion-button {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  --background: white; /* Fond blanc */ /* Texte et icône de couleur sombre pour contraster sur le fond blanc */
+}
+
+.add-button {
+  // --background: #90CAF9; /* Bleu pour l'icône + */
+  --color: #90CAF9; /* Texte et icône blancs */
+}
+
+.remove-button {
+  --color: red;
+}
+.quantity-control ion-icon {
+  font-size: 30px;
+}
+.quantity-control {
+  margin-top: -50px; 
+}
+
+  .detail-prix-container {
+    margin-top: 5px;
+    background-color: white;
+    padding: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detail-title {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .detail-label {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .detail-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .total-container {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total-container .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .total-container .detail-label {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .total-container .detail-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: black; /* Par exemple, une couleur orange pour bien le faire ressortir */
+  }
+  .button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%; 
+  }
+  
+  .custom-button {
+    color: white;
+    --background: #90caf9;
+    --background-hover: #2563eb; 
+    --border-radius: 10px; 
+    --padding: 1rem; 
+    font-size: 1.2rem; 
+    text-align: center;
+  }
+  
+  
+  

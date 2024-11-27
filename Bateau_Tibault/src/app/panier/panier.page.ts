@@ -100,4 +100,7 @@ export class PanierPage implements OnInit {
   onDeleteProduitFronCart(){
 
   }
+  onGoToFormulaire(){
+    this.router.navigate(['/formulaire'])
+  }
 }

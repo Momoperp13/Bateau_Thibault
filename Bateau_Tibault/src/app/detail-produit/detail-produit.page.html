@@ -1,50 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <h1>Achat du produit</h1>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-buttons slot="start" (click) ="onGoToProduits()">
-      <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
+    <ion-buttons slot="start" (click)="onGoToProduits()">
+      <ion-icon src="assets/icon/arrow-back.svg" class="custom-icon" name="arrow-back" size="large"></ion-icon>
+      <span class="costum-title"><h3>Achat de produit</h3></span>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item lines ="none">
-  <div class="image-section">
-    <img [src]="produit.image" alt="produit">
-  </div>
-  <div class="boat-name">
-    <h2><strong>{{produit.name}}</strong></h2>
-    <div class="owner-name">
-      {{produit.prix}}€
+<ion-content class="page-content">
+  <div class="product-container">
+    <!-- Image -->
+    <img [src]="produit.image" alt="produit" class="product-image">
+
+    <!-- Informations -->
+    <div class="product-info">
+      <h2 class="product-name"><strong>{{produit.name}}</strong></h2>
+      <h2 class="product-price"><strong>{{produit.prix}} €</strong></h2>
+
+      <!-- Gestion de la quantité -->
+      <div class="quantity-control">
+        <ion-item lines="none">
+          <ion-label position="floating">Qty :</ion-label>
+          <ion-input [(ngModel)]="quantite" placeholder="0" readonly></ion-input> <!-- Lier la valeur avec ngModel -->
+        </ion-item>
+        <ion-item lines="none">
+          <ion-button class="add-button" (click)="addQuantite()">
+            <ion-icon name="add-circle" src="assets/icon/add-circle.svg"></ion-icon>
+          </ion-button>
+          <ion-button class="remove-button" (click)="removeQuantite()">
+            <ion-icon name="remove-circle" src="assets/icon/remove-circle.svg"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </div>
     </div>
-    <ion-item lines ="none">
-      <ion-label position="floating">Qty :</ion-label>
-      <ion-input  placeholder="0" readonly></ion-input>
-      <ion-input></ion-input>
-      <ion-button (onclick)="addQuantite()">
-        <ion-icon name="add-circle" src = "assets/icon/add-circle.svg"></ion-icon>
-      </ion-button>
-      <ion-button (onclick)="removeQuantite()">
-        <ion-icon name="remove-circle" src = "assets/icon/remove-circle.svg"></ion-icon>
-      </ion-button>
-    </ion-item>
   </div>
-</ion-item>
-    <h3>Détails de prix</h3>
-    <ion-item lines = "none">
-      <p>Prix(1 unité)</p>
-      <h4>{{produit.prix}}€</h4>
-    </ion-item>
-    <ion-item lines = "none">
-      <p>Livraison gratuit</p>
-      <h4>info</h4>
-    </ion-item>
-    <ion-item lines = "none">
-      <h2>Total</h2>
-      <h4>{{produit.prix}}</h4>
-    </ion-item>
-    <ion-button (click) = goToFormulaire()>Ajouter au panier</ion-button>
+
+  <!-- Détail Prix -->
+  <div class="detail-prix-container">
+    <h3 class="detail-title">Détail prix</h3>
+    <div class="detail-row">
+      <span class="detail-label">Prix unitaire</span>
+      <span class="detail-value">{{produit.prix}} €</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Livraison gratuite</span>
+      <span class="detail-value">Info</span>
+    </div>
+  </div>
+  <div class="total-container">
+    <div class="detail-row">
+      <span class="detail-label"><strong>Total</strong></span>
+      <span class="detail-value">{{calculerTotal()}} €</span> <!-- Affiche le total calculé -->
+    </div>
+  </div>
+  <div class="button-container">
+    <ion-button expand="block" class="custom-button" (click)="onGoToPanier()">Ajouter au panier</ion-button>
+  </div>
   
 </ion-content>
+
+

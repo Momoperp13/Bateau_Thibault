@@ -7,7 +7,7 @@ ion-toolbar {
   color: white;
 }
 ion-searchbar{
-  background: white;
+  --background: white;
   width: 400px;
   border-radius: 30px;
   margin-top: 10px;
@@ -72,7 +72,7 @@ ion-card {
   flex-direction: column; 
   justify-content: space-between; 
   align-items: center;
-  margin: 20px;
+  margin-bottom: 20px;
 
 }
 ion-grid{
@@ -83,20 +83,83 @@ ion-list{
 }
 
 .custom-image {
-  height: 150px;
-  width: 180px;
+  height: 130px;
+  width: 100%;
   object-fit: cover; 
   border-radius: 10px;
-  
 }
 
 h1{
   margin-left: 20px;
 }
-.btnacheter{
-  background:#90CAF9;
-  width: 60px;
+.button-prix-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
 }
-.headerachat{
-  margin-bottom: 30px;
+
+.btnacheter {
+
+  background-color: #90CAF9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.prix {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+.promotion {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Permet à l'enfant d'utiliser un positionnement absolu */
+}
+
+.promotion-image {
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  filter: brightness(60%);
+}
+.popular{
+  margin-left: 40px;
+  color: black;
+}
+.new_promotion{
+  position: absolute;
+  color: white; 
+  font-size: 28px;
+  top: 30%; 
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.voir{
+  position: absolute;
+  background: transparent;
+  width: 200px;
+  border-radius: 20px ;
+  height: 45px;
+  color: white; 
+  font-size: 28px;
+  top: 60%; 
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  border: 2px solid white;
+
 }

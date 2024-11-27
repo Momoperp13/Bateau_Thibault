@@ -39,16 +39,18 @@
     </ion-card>
   </div>
   <div class="product-card">
-    <p>Total : {{ total}} €</p>
+    <ion-item >
+      <p class="totalcustom">Total : {{ total}} €</p>
+    </ion-item>
   </div>
   <div class="product-card">
     <ion-item lines ="none">
-      <ion-icon src="../../assets/icon/home.svg" name="home"></ion-icon>
-      <p>Adresse de livraison : {{formulaire.numero}} {{formulaire.rue}} {{formulaire.ville}} {{formulaire.code_postale}} {{formulaire.pays}}</p>
+      <ion-icon src="../../assets/icon/home.svg" name="home" class = "icon"></ion-icon>
+      <p class="parag">Adresse de livraison : {{formulaire.numero}} {{formulaire.rue}} {{formulaire.ville}} {{formulaire.code_postale}} {{formulaire.pays}}</p>
     </ion-item>
     <ion-item lines ="none">
-      <ion-icon src="../../assets/icon/home.svg" name="home"></ion-icon>
-      <p>date de livraison : </p>
+      <ion-icon src="../../assets/icon/alarm.svg" class ="icon" name="alarm"></ion-icon>
+      <p class="parag">date de livraison : {{ currentDate | date: 'd MMMM y'}}</p>
     </ion-item>
     
   </div>

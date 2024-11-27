@@ -12,6 +12,9 @@ import { Router,NavigationExtras } from '@angular/router';
   imports: [FormsModule,IonInput,IonSelect,IonSelectOption,IonButtons,IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle]
 })
 export class FormulairePage implements OnInit {
+  currentDate: Date = new Date();
+  delai_de_livraison =7;
+  
   formulaire ={
     nom:'',
     numero:'',
@@ -23,13 +26,15 @@ export class FormulairePage implements OnInit {
 
   constructor( private router: Router) { }
   ngOnInit() {
-    
-    
+    this.currentDate.setDate(this.currentDate.getDate() + this.delai_de_livraison);
+    console.log("date:",this.currentDate) 
   }
   onSubmit(formulaire:{nom:String, numero: String, rue:String, ville:String, code_postale:number, pays:String}) {
     console.log('Données de l\'adresse soumises :', formulaire);
+    console.log("date:",this.currentDate)
     let navigationExtras: NavigationExtras = {
       state:{
+        currentDate:this.currentDate,
         formulaire:formulaire   
       }
       

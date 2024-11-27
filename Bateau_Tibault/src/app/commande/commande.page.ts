@@ -60,6 +60,10 @@ import { NgFor } from '@angular/common';
 export class CommandePage implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
   currentDate: Date = new Date();
+  date_livraison!:Date;
+  
+  
+  
   // produit!:{
   //   name : String,
   //   prix:number,
@@ -92,9 +96,11 @@ export class CommandePage implements OnInit {
   total:number=0;
 // à la palce de Products on va mettre ce qu'on va recuperer de local storage
   ngOnInit() {
+    console.log("date:", this.currentDate);
     this.route.queryParams.subscribe(params => {
       if(this.router.getCurrentNavigation()?.extras.state){
-        this.formulaire = this.router.getCurrentNavigation()?.extras.state?.['formulaire'];
+        this.formulaire = this.router.getCurrentNavigation()?.extras.state?.['formulaire'],
+        this.currentDate = this.router.getCurrentNavigation()?.extras.state?.['currentDate'];
       }
     })
     

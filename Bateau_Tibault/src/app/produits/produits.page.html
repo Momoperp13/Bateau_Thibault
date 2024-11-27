@@ -9,6 +9,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="promotion">
+  <img src="./assets/images/promotion.jpg" alt="promotion" class="promotion-image">
+  <h3 class="new_promotion">nouveaux promotions</h3>
+  <button class="voir">voir plus</button>
+  </div>
+  <h2 class="popular"><strong>Produits Populaires</strong></h2>
   <ion-list>
     <ion-grid>
     <ion-row class ="ion-justify-content-between">
@@ -19,12 +25,11 @@
           <img alt ="image" class = "custom-image" [src]="produit.image"/>
           <ion-card-header>
             <ion-card-title><h3>{{produit.name}}</h3></ion-card-title>
-          </ion-card-header >
-            <ion-item lines ="none" class="headerachat">
-                <button (click) = "onLoadProduit(produit)" class="btnacheter">Acheter</button>
-                {{produit.prix}}€
-            </ion-item>
-          
+          </ion-card-header>
+          <div class="button-prix-container">
+            <button (click)="onLoadProduit(produit)" class="btnacheter">Acheter</button>
+            <span class="prix">{{produit.prix}}€</span>
+          </div>
         </ion-card>   
       </ion-item>
       </ion-col>
