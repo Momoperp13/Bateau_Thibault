@@ -22,6 +22,7 @@ export class DetailProduitPage implements OnInit {
     image:String
   }
   quantite:number=1;
+  total:number=0;
   constructor(private route:ActivatedRoute, private router: Router) { 
   }
   onGoToBateau(){
@@ -50,7 +51,9 @@ export class DetailProduitPage implements OnInit {
       id: produit.id,
       name: produit.name,
       prix: produit.prix,
-      quantite: produit.quantite,
+      image:produit.image,
+      quantite: this.quantite,
+      total:produit.prix*this.quantite,
     };
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
   cart.push(productToAdd);
