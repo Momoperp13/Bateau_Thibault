@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {IonLabel,IonItem,IonIcon,IonBackButton, IonButtons,IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-import { StatusBar } from '@capacitor/status-bar';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bateau-detail',
@@ -12,16 +12,24 @@ import { StatusBar } from '@capacitor/status-bar';
   imports: [IonLabel,IonItem,IonIcon,IonBackButton,IonButtons,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class BateauDetailPage implements OnInit {
-
-  constructor() { 
-    this.initializeApp();
+  bateau!:{
+    name : String,
+    presentation : String[],
+    image:String
   }
-
+  constructor(private route:ActivatedRoute, private router: Router) { 
+  }
+  onGoToBateau(){
+    this.router.navigate(['/Bateau'])  }
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if(this.router.getCurrentNavigation()?.extras.state){
+        this.bateau = this.router.getCurrentNavigation()?.extras.state?.['bateau'];
+      }
+    })
   }
-  initializeApp() {
-    // Change la couleur de la barre d'état
-    StatusBar.setBackgroundColor({ color: '#90CAF9' });
-  }
+
 
 }
+
+

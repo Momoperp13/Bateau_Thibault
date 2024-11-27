@@ -13,7 +13,18 @@ import {
   IonItem,
   IonLabel,
   IonThumbnail,
+  IonSearchbar,
+  IonList,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCardHeader,
+  IonCardTitle,
+
 } from '@ionic/angular/standalone';
+import { Bateau } from '../models/bateaux';
+import { BateauService } from '../services/bateau.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 
 @Component({
@@ -35,32 +46,51 @@ import {
     IonItem,
     IonLabel,
     IonThumbnail,
+    IonSearchbar,
+    IonList,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCardHeader,
+    IonCardTitle,
+
   ],
 })
 export class BateauxPage implements OnInit {
-  constructor() {}
-  currentDate: Date = new Date();
+  bateauxList!: Bateau[];
+  filteredItems!:Bateau[];
+  searchText:String = "";
+  constructor(private router:Router, private bateauService:BateauService) {}
 
-  products = [
-    {
-      name: 'Produit 1',
-      image: 'assets/images/daurade.jpg',
-      quantity: 2,
-      price: 20.0,
-    },
-    {
-      name: 'Produit 2',
-      image: 'assets/images/daurade.jpg',
-      quantity: 1,
-      price: 15.5,
-    },
-    {
-      name: 'Produit 3',
-      image: 'assets/images/daurade.jpg',
-      quantity: 3,
-      price: 10.0,
-    },
-  ];
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bateauService.getBateaux().subscribe(res=>{
+      console.log(res);
+      this.bateauxList = res.bateau
+      this.filteredItems =res.bateau
+    },
+    err =>{
+      console.log("error")
+    }
+    );
+  }
+  onLoadBateau(bateau:{name:String, presentation : String [], image:String}){
+    
+    let navigationExtras: NavigationExtras = {
+      state:{
+        bateau:bateau
+        
+      }
+    };
+
+    this.router.navigate(['/bateau-detail'],navigationExtras);
+  }
+  filterItems() {
+    this.filteredItems = this.bateauxList.filter(bateau=>
+      bateau.name.toLowerCase().includes(this.searchText.toLowerCase())
+      
+    );
+    console.log(this.filteredItems)
+  }
+
 }

@@ -1,0 +1,39 @@
+ion-header {
+  --background: #90CAF9;
+}
+
+ion-toolbar {
+  --background: #90CAF9;
+}
+.page-content {
+  background: white; /* Fond blanc pour tout l'ion-content */
+  padding: 0; /* Supprime les marges internes */
+}
+
+.product-container {
+  display: flex; /* Organise en ligne */
+  align-items: center; /* Centre verticalement */
+  gap: 15px; /* Espacement entre l'image et les infos */
+  padding: 15px; /* Espacement interne */
+  background-color: white; /* Fond blanc spécifique pour le conteneur produit */
+  border-radius: 10px; /* Coins arrondis (optionnel) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet élégant */
+}
+
+.product-image {
+  width: 150px; /* Largeur fixe pour l'image */
+  height: 150px; /* Hauteur fixe */
+  object-fit: cover; /* Ajuste l'image sans déformation */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* Les infos sont empilées */
+  gap: 10px; /* Espacement entre le nom et le prix */
+}
+
+.product-name, .product-price {
+  margin: 0; /* Supprime les marges par défaut */
+  color: #333; /* Couleur du texte */
+}

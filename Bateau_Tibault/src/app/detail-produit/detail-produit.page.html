@@ -1,13 +1,50 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>detail-produit</ion-title>
+    <h1>Achat du produit</h1>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) ="onGoToProduits()">
+      <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detail-produit</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item lines ="none">
+  <div class="image-section">
+    <img [src]="produit.image" alt="produit">
+  </div>
+  <div class="boat-name">
+    <h2><strong>{{produit.name}}</strong></h2>
+    <div class="owner-name">
+      {{produit.prix}}€
+    </div>
+    <ion-item lines ="none">
+      <ion-label position="floating">Qty :</ion-label>
+      <ion-input  placeholder="0" readonly></ion-input>
+      <ion-input></ion-input>
+      <ion-button (onclick)="addQuantite()">
+        <ion-icon name="add-circle" src = "assets/icon/add-circle.svg"></ion-icon>
+      </ion-button>
+      <ion-button (onclick)="removeQuantite()">
+        <ion-icon name="remove-circle" src = "assets/icon/remove-circle.svg"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+</ion-item>
+    <h3>Détails de prix</h3>
+    <ion-item lines = "none">
+      <p>Prix(1 unité)</p>
+      <h4>{{produit.prix}}€</h4>
+    </ion-item>
+    <ion-item lines = "none">
+      <p>Livraison gratuit</p>
+      <h4>info</h4>
+    </ion-item>
+    <ion-item lines = "none">
+      <h2>Total</h2>
+      <h4>{{produit.prix}}</h4>
+    </ion-item>
+    <ion-button (click) = goToFormulaire()>Ajouter au panier</ion-button>
+  
 </ion-content>
