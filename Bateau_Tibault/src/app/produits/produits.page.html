@@ -3,7 +3,8 @@
     <h1>Produits</h1>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar  debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
+    <ion-searchbar  [(ngModel)]="searchText" 
+    (ionInput)="filterItems()" debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +18,7 @@
   <ion-list>
     <ion-grid>
     <ion-row class ="ion-justify-content-between">
-      @for(produit of produitsList;track produit.name){
+      @for(produit of filteredItems;track produit.name){
       <ion-col size ="6">
       <ion-item>
         <ion-card>

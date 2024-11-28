@@ -4,6 +4,7 @@ ion-header {
 
 ion-toolbar {
   --background: #90CAF9;
+   color: white;
 }
 ion-searchbar{
   background: white;
@@ -12,15 +13,16 @@ ion-searchbar{
   margin-top: 10px;
   margin-bottom: 15px;
   margin-left: 10px;
-  margin-right: 2px;
+  --margin-right: -20px;
   color: gray;
-
 }
+
+
 ion-content{
   --background: #f8f8f8;
 }
 ion-item{
-  --background: #f8f8f8;
+  --background: #ffffff;
   margin-left: -25px;
   margin-right: -25px;
   margin-top: -25px;
@@ -48,14 +50,10 @@ bottom: 40px;
 }
 ion-card-title {
   color: black;
-  font-size: 16px;
   margin-top: -35px;
   margin-bottom: 40px;
-line-height: 1.2; 
-max-height: 72px;
-overflow: hidden; 
-text-overflow: ellipsis;
 }
+
 ion-col {
   --background: white;
   display: flex;
@@ -63,7 +61,7 @@ ion-col {
   align-items: center;
 }
 ion-card {
-  --background: white;
+  --ion-color: white;
   width: 180px;
   height: 300px;
   display: flex; 
@@ -74,7 +72,7 @@ ion-card {
 
 }
 ion-grid{
-  --background: white;
+  --background: rgb(202, 52, 52);
 }
 ion-list{
   --background: white;
@@ -94,4 +92,5 @@ ion-icon{
 
 h1{
   margin-left: 20px;
+  color: white;
 }

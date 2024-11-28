@@ -64,6 +64,14 @@ export const routes: Routes = [
   {
     path: 'bateau-detail',
     loadComponent: () => import('./bateau-detail/bateau-detail.page').then( m => m.BateauDetailPage)
+  },  {
+    path: 'formulaire',
+    loadComponent: () => import('./formulaire/formulaire.page').then( m => m.FormulairePage)
   },
+  {
+    path: 'commande',
+    loadComponent: () => import('./commande/commande.page').then( m => m.CommandePage)
+  },
+
 
 ];

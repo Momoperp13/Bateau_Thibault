@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) ="onGoToAchat()">
+      <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
+    </ion-buttons>
+    <h1>Informations livraison</h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit(formulaire)">
+    <!-- Champ pour le nom -->
+    <ion-item>
+      <ion-label  position="floating">Nom</ion-label>
+      <ion-input  [(ngModel)]="formulaire.nom" name="nom" required></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le numéro de rue -->
+    <ion-item>
+      <ion-label position="floating">Numéro de rue</ion-label>
+      <ion-input  [(ngModel)]="formulaire.numero" name="numero"  required></ion-input>
+    </ion-item>
+
+    <!-- Champ pour la rue -->
+    <ion-item>
+      <ion-label position="floating">Rue</ion-label>
+      <ion-input  [(ngModel)]="formulaire.rue" name="rue" required></ion-input>
+    </ion-item>
+
+    <!-- Champ pour la ville -->
+    <ion-item>
+      <ion-label position="floating">Ville</ion-label>
+      <ion-input  [(ngModel)]="formulaire.ville" name="ville" required></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le code postal -->
+    <ion-item>
+      <ion-label position="floating">Code Postal</ion-label>
+      <ion-input  [(ngModel)]="formulaire.code_postale" name="code_postale" type="number" required></ion-input>
+    </ion-item>
+
+    <!-- Sélection du pays -->
+    <ion-item>
+      <ion-label>Pays</ion-label>
+      <ion-select  [(ngModel)]="formulaire.pays" name="pays" required>
+        <ion-select-option value="france">France</ion-select-option>
+        <ion-select-option value="belgium">Belgique</ion-select-option>
+        <ion-select-option value="spain">Espagne</ion-select-option>
+        <ion-select-option value="germany">Allemagne</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Bouton pour soumettre -->
+    <ion-button expand="full" type="submit" [disabled]="!formulaire.nom || !formulaire.rue || !formulaire.ville || !formulaire.code_postale || !formulaire.pays">
+      Soumettre
+    </ion-button>
+  </form>
+</ion-content>

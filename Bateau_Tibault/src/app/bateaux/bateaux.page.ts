@@ -57,7 +57,10 @@ import { NavigationExtras, Router } from '@angular/router';
   ],
 })
 export class BateauxPage implements OnInit {
+
   bateauxList!: Bateau[];
+  filteredItems!:Bateau[];
+  searchText:String = "";
   constructor(private router:Router, private bateauService:BateauService) {}
 
 
@@ -65,6 +68,7 @@ export class BateauxPage implements OnInit {
     this.bateauService.getBateaux().subscribe(res=>{
       console.log(res);
       this.bateauxList = res.bateau
+      this.filteredItems =res.bateau
     },
     err =>{
       console.log("error")
@@ -83,5 +87,12 @@ export class BateauxPage implements OnInit {
     this.router.navigate(['/bateau-detail'],navigationExtras);
   }
 
+  filterItems() {
+    this.filteredItems = this.bateauxList.filter(bateau=>
+      bateau.name.toLowerCase().includes(this.searchText.toLowerCase())
+      
+    );
+    console.log(this.filteredItems)
+  }
 
 }

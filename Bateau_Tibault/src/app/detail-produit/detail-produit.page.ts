@@ -25,7 +25,7 @@ export class DetailProduitPage implements OnInit {
   total:number=0;
   constructor(private route:ActivatedRoute, private router: Router) { 
   }
-  onGoToBateau(){
+  onGoToProduits(){
     this.router.navigate(['/Produit'])}
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -66,7 +66,7 @@ export class DetailProduitPage implements OnInit {
 
  onGoToPanier(){
   this.addToCart(this.produit);
-  // this.router.navigate(['/panier']);
+  this.router.navigate(['/panier']);
  }
 }
 

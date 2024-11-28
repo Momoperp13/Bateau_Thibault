@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
-        <h1 class="custom-title">Panier</h1>
+        <h1 class="custom-title">Confirmation Commande</h1>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end" class="heart">
@@ -29,21 +29,35 @@
         </ion-thumbnail>
         <ion-label>
           <h2>{{ product.name }}</h2>
-          <p>{{ product.quantite }} unité</p>
-          <p>Prix unitaire : {{ product.prix}} €</p>
-          <p>Total : {{ product.quantite * product.prix}} €</p>
+          <p>{{ product.quantity }} unité</p>
+          <p>Prix unitaire : {{ product.price}} €</p>
+          <p>Total : {{ product.quantity * product.price}} €</p>
         </ion-label>
         <div class="card-buttons">
-          <ion-button class="button-edit" size="small" expand="block" (click)="onGoToproduitDetail()">Modifier</ion-button>
-          <ion-button color="danger" size="small" expand="block">Supprimer</ion-button>
         </div>
       </ion-item>
     </ion-card>
   </div>
+  <div class="product-card">
+    <ion-item >
+      <p class="totalcustom">Total : {{ total}} €</p>
+    </ion-item>
+  </div>
+  <div class="product-card">
+    <ion-item lines ="none">
+      <ion-icon src="../../assets/icon/home.svg" name="home" class = "icon"></ion-icon>
+      <p class="parag">Adresse de livraison : {{formulaire.numero}} {{formulaire.rue}} {{formulaire.ville}} {{formulaire.code_postale}} {{formulaire.pays}}</p>
+    </ion-item>
+    <ion-item lines ="none">
+      <ion-icon src="../../assets/icon/alarm.svg" class ="icon" name="alarm"></ion-icon>
+      <p class="parag">date de livraison : {{ currentDate | date: 'd MMMM y'}}</p>
+    </ion-item>
+    
+  </div>
 
   <div class="button-container">
-    <ion-button (click) = "onGoToFormulaire()"expand="block" class="custom-button">
-      Valider le panier
+    <ion-button expand="block" class="custom-button">
+      Envoyer la commande
     </ion-button>
   </div>
 </ion-content>

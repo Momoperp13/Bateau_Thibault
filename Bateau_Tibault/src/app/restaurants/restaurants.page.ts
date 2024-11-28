@@ -16,12 +16,15 @@ import { RestaurantsService } from '../services/restaurants.service';
 export class RestaurantsPage implements OnInit {
 
   restaurantsList!: Restaurant[];
+  filteredItems!:Restaurant[];
+  searchText:String = "";
   constructor(private router:Router, private restaurantsService:RestaurantsService) { }
 
   ngOnInit() {
     this.restaurantsService.getRestaurants().subscribe(res=>{
       console.log(res);
       this.restaurantsList = res.restaurants
+      this.filteredItems = res.restaurants
     },
     err =>{
       console.log("error")
@@ -38,6 +41,13 @@ export class RestaurantsPage implements OnInit {
     };
 
     this.router.navigate(['/detail-restaurant'],navigationExtras);
+  }
+  filterItems() {
+    this.filteredItems = this.restaurantsList.filter(restaurant=>
+      restaurant.name.toLowerCase().includes(this.searchText.toLowerCase())
+      
+    );
+    console.log(this.filteredItems)
   }
 
 }

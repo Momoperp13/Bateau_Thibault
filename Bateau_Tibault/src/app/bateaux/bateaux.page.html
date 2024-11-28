@@ -1,9 +1,11 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <h1 >Bateaux</h1>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar  debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
+    <ion-searchbar  [(ngModel)]="searchText" 
+    (ionInput)="filterItems()" debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +13,7 @@
   <ion-list>
     <ion-grid>
     <ion-row class ="ion-justify-content-between">
-      @for(bateau of bateauxList;track bateau.name){
+      @for(bateau of filteredItems;track bateau.name){
       <ion-col size ="6">
       <ion-item>
         <ion-card (click) = "onLoadBateau(bateau)" button>
@@ -28,3 +30,4 @@
     </ion-grid>
   </ion-list>
 </ion-content>
+
