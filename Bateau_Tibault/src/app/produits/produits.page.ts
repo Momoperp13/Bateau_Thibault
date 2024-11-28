@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
+import { IonButtons,IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
 import { NavigationExtras, Router } from '@angular/router';
 import { Produit } from '../models/produits';
 import { ProduitsService } from '../services/produits.service';
@@ -11,7 +11,7 @@ import { ProduitsService } from '../services/produits.service';
   templateUrl: './produits.page.html',
   styleUrls: ['./produits.page.scss'],
   standalone: true,
-  imports: [IonContent, FormsModule, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle]
+  imports: [IonButtons,IonContent, FormsModule, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle]
 })
 export class ProduitsPage implements OnInit {
 
@@ -46,6 +46,9 @@ export class ProduitsPage implements OnInit {
     this.filteredItems = this.produitsList.filter(produit=>
       produit.name.toLowerCase().includes(this.searchText.toLowerCase())
     );
+  }
+  goToCart() {
+    this.router.navigate(['/panier']);  // 'panier' doit correspondre au chemin défini dans les routes
   }
 }
 

@@ -84,7 +84,12 @@ img{
   transform: translateX(-50%); 
   width: 80%; 
 }
-
+ion-select .select-placeholder {
+  display: none;
+}
+ion-select .select-text {
+  visibility: hidden;
+}
 .custom-button {
   --background: #90caf9;
   --background-hover: #2563eb; 
@@ -92,6 +97,8 @@ img{
   --padding: 1rem; 
   font-size: 1.2rem; 
   text-align: center;
+  height:60px;
+  width:160px;
 }
 
 .card-buttons {

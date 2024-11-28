@@ -1,10 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <h1 >Restaurants</h1>
+    <ion-buttons slot="end" class="heart">
+      <ion-button class="spaced-button" (click)="goToCart()">
+        <ion-icon class="cart" src="../../assets/icon/cart.svg" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
   <ion-toolbar>
     <ion-searchbar  [(ngModel)]="searchText" 
     (ionInput)="filterItems()" debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>
+
   </ion-toolbar>
 </ion-header>
 

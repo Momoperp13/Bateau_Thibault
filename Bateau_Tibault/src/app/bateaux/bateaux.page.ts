@@ -94,5 +94,8 @@ export class BateauxPage implements OnInit {
     );
     console.log(this.filteredItems)
   }
+  goToCart() {
+    this.router.navigate(['/panier']);  // 'panier' doit correspondre au chemin défini dans les routes
+  }
 
 }

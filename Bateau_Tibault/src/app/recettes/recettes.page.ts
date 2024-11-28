@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
+import { IonButtons,IonContent, IonHeader, IonTitle, IonToolbar,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList,IonText,IonCard,IonCardHeader,IonCardTitle } from '@ionic/angular/standalone';
 import { NavigationExtras, Router } from '@angular/router';
 import { Recette } from '../models/recettes';
 import { RecettesService } from '../services/recettes.service';
@@ -12,7 +12,7 @@ import { RecettesService } from '../services/recettes.service';
   templateUrl: './recettes.page.html',
   styleUrls: ['./recettes.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList, IonText,IonCard,IonCardHeader,IonCardTitle]
+  imports: [IonButtons,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonSearchbar,IonIcon,IonLabel,IonButton,IonImg,IonGrid,IonItem,IonRow, IonCol,IonList, IonText,IonCard,IonCardHeader,IonCardTitle]
 })
 export class RecettesPage implements OnInit {
   recettesList!: Recette[];
@@ -50,5 +50,9 @@ export class RecettesPage implements OnInit {
     );
     console.log(this.filteredItems)
   }
+  goToCart() {
+    this.router.navigate(['/panier']);  // 'panier' doit correspondre au chemin défini dans les routes
+  }
+
 }
 

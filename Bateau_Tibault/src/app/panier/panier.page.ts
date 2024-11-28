@@ -109,7 +109,10 @@ onPointRelaisChange(event: any) {
       
   }
     console.log(this.pointchoisi);
-    this.router.navigate(['/commande'],navigationExtras);
+    if(this.products !=''){
+      this.router.navigate(['/commande'],navigationExtras);
+    }
+    
   
 }
 

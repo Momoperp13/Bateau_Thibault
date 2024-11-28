@@ -4,7 +4,8 @@ ion-content {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-   opacity: 80%;
+   opacity: 90%;
+   background-blend-mode: lighten;
    
    
 }
@@ -79,6 +80,7 @@ app-tab-bar {
   --background: white;
   bottom: 0;
   width: 100%;
+  // height: 680px;
 }
 
 ion-button {
