@@ -2,8 +2,9 @@
   <ion-toolbar>
     <ion-buttons slot="start" (click)="onGoToProduits()">
       <ion-icon src="assets/icon/arrow-back.svg" class="custom-icon" name="arrow-back" size="large"></ion-icon>
-      <span class="costum-title"><h3>Achat de produit</h3></span>
+      <span class="costum-title"><h1>Détail de produit</h1></span>
     </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -37,14 +38,18 @@
 
   <!-- Détail Prix -->
   <div class="detail-prix-container">
-    <h3 class="detail-title">Détail prix</h3>
+    <h3 class="detail-title">Détail du prix</h3>
     <div class="detail-row">
       <span class="detail-label">Prix unitaire</span>
       <span class="detail-value">{{produit.prix}} €</span>
     </div>
     <div class="detail-row">
-      <span class="detail-label">Livraison gratuite</span>
-      <span class="detail-value">Info</span>
+      <span class="detail-label">Quantité </span>
+      <span class="detail-value">{{quantite}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Délai de livraison</span>
+      <span class="detail-value">2 j</span>
     </div>
   </div>
   <div class="total-container">

@@ -1,9 +1,9 @@
 <ion-header>
+  
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        <h1 class="custom-title">Panier</h1>
-      </ion-button>
+    <ion-buttons slot="start" (click)="onGoToProduits()">
+      <ion-icon src="assets/icon/arrow-back.svg" class="custom-icon" name="arrow-back" size="large"></ion-icon>
+      <span class="costum-title"><h1>Panier</h1></span>
     </ion-buttons>
     <ion-buttons slot="end" class="heart">
       <ion-button class="spaced-button">
@@ -34,8 +34,12 @@
           <p>Total : {{ product.quantite * product.prix}} €</p>
         </ion-label>
         <div class="card-buttons">
-          <ion-button class="button-edit" size="small" expand="block" (click)="onGoToproduitDetail()">Modifier</ion-button>
-          <ion-button color="danger" size="small" expand="block">Supprimer</ion-button>
+          <ion-button class="button-edit" size="small" expand="block" (click)="onGoToproduitDetail(product)">
+            Modifier
+          </ion-button>
+          <ion-button color="danger" size="small" expand="block" (click)="onDeleteProduitFromCart(product.id)">
+            Supprimer
+          </ion-button>
         </div>
       </ion-item>
     </ion-card>

@@ -18,9 +18,14 @@ ion-header {
     margin-top: -5px;
     padding: 10px;
   }
-  .custom-icon{
+  span h1 {
+    margin-left: 0px;
     margin-top: 20px;
-    
+    color: white;
+  }
+  .custom-icon {
+    color: white;
+    margin-top: 0px;
   }
   .product-container {
     display: flex;

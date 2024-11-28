@@ -13,7 +13,7 @@ import { Router,NavigationExtras } from '@angular/router';
 })
 export class FormulairePage implements OnInit {
   currentDate: Date = new Date();
-  delai_de_livraison =7;
+  delai_de_livraison =2;
   
   formulaire ={
     nom:'',
