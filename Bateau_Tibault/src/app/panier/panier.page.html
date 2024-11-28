@@ -48,9 +48,14 @@
 
       <!-- Deuxième bouton pour Choisir un point d'intérêt -->
       <ion-col size="6">
-        <ion-button  expand="block" class="custom-button">
-          Choisir un point d'intérêt
-        </ion-button>
+        <ion-button expand="block" class="custom-button">Choisir un point relais
+        
+        <ion-select  (ionChange)="onPointRelaisChange($event)">
+          <ion-select-option *ngFor="let point of pointsRelais" [value]="point.nom">
+            {{ point.nom }}
+          </ion-select-option>
+        </ion-select>
+      </ion-button>
       </ion-col>
     </ion-row>
   </div>

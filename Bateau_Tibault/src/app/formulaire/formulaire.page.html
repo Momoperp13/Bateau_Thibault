@@ -2,8 +2,8 @@
   <ion-toolbar>
     <ion-buttons slot="start" (click) ="onGoToAchat()">
       <ion-icon src="assets/icon/arrow-back.svg" class ="custom-icon" name="arrow-back" size="large"></ion-icon>
+      <span class="costum-title"><h1>Informations de livraison</h1></span>
     </ion-buttons>
-    <h1>Informations livraison</h1>
   </ion-toolbar>
 </ion-header>
 
@@ -51,8 +51,10 @@
     </ion-item>
 
     <!-- Bouton pour soumettre -->
-    <ion-button expand="full" type="submit" [disabled]="!formulaire.nom || !formulaire.rue || !formulaire.ville || !formulaire.code_postale || !formulaire.pays">
-      Soumettre
+    <div class="button-container">
+    <ion-button class="custom-button" expand="block" type="submit" [disabled]="!formulaire.nom || !formulaire.rue || !formulaire.ville || !formulaire.code_postale || !formulaire.pays">
+      valider la commande
     </ion-button>
+  </div>
   </form>
 </ion-content>

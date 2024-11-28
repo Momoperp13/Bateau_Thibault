@@ -40,7 +40,7 @@ export class DetailProduitPage implements OnInit {
     this.quantite+=1;
   }
   removeQuantite(){
-    if (this.quantite > 0) {
+    if (this.quantite > 1) {
       this.quantite -= 1;
     }
   }

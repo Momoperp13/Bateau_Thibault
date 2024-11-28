@@ -92,6 +92,17 @@ img{
   --padding: 1rem; 
   font-size: 1.2rem; 
   text-align: center;
+  height:60px;
+  width:160px;
+}
+.selection{
+  --background: #90caf9;
+  --background-hover: #2563eb; 
+  --border-radius: 10px; 
+  --padding: 1rem; 
+  font-size: 1.2rem; 
+  color: white;
+  // text-align: center;
 }
 
 .card-buttons {

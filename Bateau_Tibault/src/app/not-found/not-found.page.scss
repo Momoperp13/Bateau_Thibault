@@ -1,30 +1,10 @@
 ion-header {
-    background-color: #90CAF9; /* Bleu clair */
+    --background: #90CAF9;
   }
   
   ion-toolbar {
     --background: #90CAF9;
-    // height: 150px;
-    
-  }
-  h1{
-    margin-left: 20px;
-    margin-top: 80px;
-    color: white;
-  }
-  .custom-icon {
-    color: white;
-    margin-top: 0px;
-  }
-  .costum-title{
-    margin-left: 10px;
-    margin-top: -5px;
-    padding: 10px;
-  }
-  span h1 {
-    margin-left: 0px;
-    margin-top: 20px;
-    color: white;
+    height: 80px;
   }
   .button-container {
     position: fixed;
@@ -43,3 +23,22 @@ ion-header {
     font-size: 1.2rem; 
     text-align: center;
   }
+
+  span{
+    // margin-left: 0px;
+    // margin-top: 20px;
+    color: white;
+  }
+  .full-height {
+    height: 100%;
+  }
+  
+  ion-row {
+    height: 100%; /* Assure que la ligne occupe toute la hauteur */
+  }
+  
+  h2 {
+    margin-bottom: 80px; /* Ajoute un espace entre le texte et le bouton */
+  }
+  
+  
