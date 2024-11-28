@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent,IonImg, IonButton,IonButtons,IonIcon } from '@ionic/angular/standalone';
+import {IonFooter,IonCol,IonRow, IonGrid,IonHeader, IonToolbar, IonTitle, IonContent,IonImg, IonButton,IonButtons,IonIcon } from '@ionic/angular/standalone';
 import  { TabBarComponent } from '../tab-bar/tab-bar.component';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [
+    IonFooter,
+    IonCol,
+    IonRow,
+    IonGrid,
     IonHeader,
     IonToolbar,
     IonTitle,
