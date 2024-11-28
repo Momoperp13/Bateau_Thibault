@@ -63,23 +63,20 @@ export class PanierPage implements OnInit {
   currentDate: Date = new Date();
 
   products!: any;
-// à la palce de Products on va mettre ce qu'on va recuperer de local storage
 ngOnInit() {
-  const storedCart = localStorage.getItem('cart'); // Récupère le panier du Local Storage
+  const storedCart = localStorage.getItem('cart');
   if (storedCart) {
-    this.products = JSON.parse(storedCart); // Convertit la chaîne JSON en tableau d'objets
+    this.products = JSON.parse(storedCart);
   } else {
-    this.products = []; // Panier vide si aucune donnée n'est trouvée
+    this.products = [];
   }
 
   console.log('Produits dans le panier:', this.products);
 }
 
 onDeleteProduitFromCart(productId: number) {
-  // Filtrer les produits pour exclure celui avec l'id donné
   this.products = this.products.filter((product: any) => product.id !== productId);
 
-  // Mettre à jour le Local Storage avec le nouveau panier
   localStorage.setItem('cart', JSON.stringify(this.products));
 
   console.log('Produit supprimé, nouveau panier:', this.products);
@@ -87,11 +84,15 @@ onDeleteProduitFromCart(productId: number) {
 
 onGoToproduitDetail(product: any) {
   this.router.navigate(['detail-produit'], {
-    state: { produit: product }, // Passe les détails du produit via le state
+    state: { produit: product }, 
   });
 }
 
   onGoToFormulaire(){
     this.router.navigate(['/formulaire'])
   }
+  onGoToProduits(){
+    this.router.navigate(['/Produit'])
+  }
 }
+

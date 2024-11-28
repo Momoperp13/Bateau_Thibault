@@ -66,14 +66,7 @@ export class CommandePage implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
   currentDate: Date = new Date();
   date_livraison!:Date;
-  
-  
-  
-  // produit!:{
-  //   name : String,
-  //   prix:number,
-  //   image:String
-  // }
+
   formulaire!:
     {
     nom:String,
@@ -102,11 +95,9 @@ ngOnInit() {
     }
   });
 
-  // Récupérer les produits du panier depuis localStorage
   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    this.products = cart; // On assigne les produits du panier récupérés depuis localStorage
-
-    // Calculer le total
+    this.products = cart; 
+   
     this.products.forEach((product) => {
       this.total += product.prix * product.quantite;
     });
@@ -115,10 +106,10 @@ ngOnInit() {
     console.log('Total:', this.total);
   }
   envoyerCommande() {
-    // Vider le panier en supprimant l'élément 'cart' du localStorage
+   
     localStorage.removeItem('cart');
     
-    // Naviguer vers la page d'accueil (ou la page de votre choix)
+   
     this.router.navigate(['/home']);
   }
 }
