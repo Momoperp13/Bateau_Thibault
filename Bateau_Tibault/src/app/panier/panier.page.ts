@@ -61,45 +61,36 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PanierPage implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
   currentDate: Date = new Date();
-  // produit!:{
-  //   name : String,
-  //   prix:number,
-  //   image:String
-  // }
 
   products!: any;
 // à la palce de Products on va mettre ce qu'on va recuperer de local storage
-  ngOnInit() {
-    this.products = [
-      {
-        name: 'Produit 1',
-        image: 'assets/images/daurade.jpg',
-        quantity: 2,
-        price: 20.0,
-      },
-      {
-        name: 'Produit 2',
-        image: 'assets/images/daurade.jpg',
-        quantity: 1,
-        price: 15.5,
-      },
-      {
-        name: 'Produit 3',
-        image: 'assets/images/daurade.jpg',
-        quantity: 3,
-        price: 10.0,
-      },
-    ];
-    console.log('prod', this.products);
+ngOnInit() {
+  const storedCart = localStorage.getItem('cart'); // Récupère le panier du Local Storage
+  if (storedCart) {
+    this.products = JSON.parse(storedCart); // Convertit la chaîne JSON en tableau d'objets
+  } else {
+    this.products = []; // Panier vide si aucune donnée n'est trouvée
   }
 
-  onGoToproduitDetail() {
-    this.router.navigate(['detail-produit']);
-  }
+  console.log('Produits dans le panier:', this.products);
+}
 
-  onDeleteProduitFronCart(){
+onDeleteProduitFromCart(productId: number) {
+  // Filtrer les produits pour exclure celui avec l'id donné
+  this.products = this.products.filter((product: any) => product.id !== productId);
 
-  }
+  // Mettre à jour le Local Storage avec le nouveau panier
+  localStorage.setItem('cart', JSON.stringify(this.products));
+
+  console.log('Produit supprimé, nouveau panier:', this.products);
+}
+
+onGoToproduitDetail(product: any) {
+  this.router.navigate(['detail-produit'], {
+    state: { produit: product }, // Passe les détails du produit via le state
+  });
+}
+
   onGoToFormulaire(){
     this.router.navigate(['/formulaire'])
   }

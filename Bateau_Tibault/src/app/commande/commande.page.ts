@@ -27,7 +27,12 @@ import {
   
 } from '@ionic/angular/standalone';
 import { NgFor } from '@angular/common';
-
+interface Product {
+  name: string;
+  image: string;
+  prix: number;
+  quantite: number;
+}
 @Component({
   selector: 'app-commande',
   templateUrl: './commande.page.html',
@@ -79,37 +84,41 @@ export class CommandePage implements OnInit {
     pays: String
     }
   
-  products = [
-    {
-      name: 'Produit 1',
-      image: 'assets/images/daurade.jpg',
-      quantity: 2,
-      price: 20.0,
-    },
-    {
-      name: 'Produit 2',
-      image: 'assets/images/daurade.jpg',
-      quantity: 1,
-      price: 15.5,
-    },
-  ];
-  total:number=0;
+    products: Product[] = [];// Liste vide qui sera remplie avec les produits du panier
+    total: number = 0;
 // à la palce de Products on va mettre ce qu'on va recuperer de local storage
-  ngOnInit() {
-    console.log("date:", this.currentDate);
-    this.route.queryParams.subscribe(params => {
-      if(this.router.getCurrentNavigation()?.extras.state){
-        this.formulaire = this.router.getCurrentNavigation()?.extras.state?.['formulaire'],
-        this.currentDate = this.router.getCurrentNavigation()?.extras.state?.['currentDate'];
-      }
-    })
-    
-    this.products.forEach(product => {this.total+=product.price*product.quantity;
-      
+ngOnInit() {
+  console.log('date:', this.currentDate);
+
+  // Récupérer les paramètres de la route (formulaire et date de livraison)
+  this.route.queryParams.subscribe((params) => {
+    if (this.router.getCurrentNavigation()?.extras.state) {
+      this.formulaire = this.router.getCurrentNavigation()?.extras.state?.[
+        'formulaire'
+      ];
+      this.currentDate = this.router.getCurrentNavigation()?.extras.state?.[
+        'currentDate'
+      ];
+    }
+  });
+
+  // Récupérer les produits du panier depuis localStorage
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    this.products = cart; // On assigne les produits du panier récupérés depuis localStorage
+
+    // Calculer le total
+    this.products.forEach((product) => {
+      this.total += product.prix * product.quantite;
     });
-    console.log('prod', this.products);
+
+    console.log('Produits récupérés du panier:', this.products);
+    console.log('Total:', this.total);
   }
-
-  
-
+  envoyerCommande() {
+    // Vider le panier en supprimant l'élément 'cart' du localStorage
+    localStorage.removeItem('cart');
+    
+    // Naviguer vers la page d'accueil (ou la page de votre choix)
+    this.router.navigate(['/home']);
+  }
 }

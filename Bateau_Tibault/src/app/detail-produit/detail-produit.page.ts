@@ -28,11 +28,13 @@ export class DetailProduitPage implements OnInit {
   onGoToProduits(){
     this.router.navigate(['/Produit'])}
   ngOnInit() {
+    
     this.route.queryParams.subscribe(params => {
       if(this.router.getCurrentNavigation()?.extras.state){
         this.produit = this.router.getCurrentNavigation()?.extras.state?.['produit'];
       }
     })
+
   }
   addQuantite(){
     this.quantite+=1;
@@ -56,14 +58,21 @@ export class DetailProduitPage implements OnInit {
       total:produit.prix*this.quantite,
     };
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-  cart.push(productToAdd);
+    const existingProductIndex = cart.findIndex((p: any) => p.id === produit.id);
 
-  // Mettre à jour le localStorage
-  localStorage.setItem('cart', JSON.stringify(cart));
-  console.log('Produit ajouté au panier', productToAdd);
+  if (existingProductIndex > -1) {
+   
+    cart[existingProductIndex].quantite = this.quantite;
+    cart[existingProductIndex].total = produit.prix * this.quantite;
+  } else {
 
+    cart.push(productToAdd);
   }
 
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  console.log('Produit ajouté/mis à jour dans le panier', cart);
+}
  onGoToPanier(){
   this.addToCart(this.produit);
   this.router.navigate(['/panier']);

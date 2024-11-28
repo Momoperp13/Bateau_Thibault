@@ -42,6 +42,11 @@ export class FormulairePage implements OnInit {
     console.log(formulaire);
     this.router.navigate(['/commande'],navigationExtras);
   }
+
+
+
+
+  
   onGoToAchat(){
     this.router.navigate(['/detail-produit'])
   }
