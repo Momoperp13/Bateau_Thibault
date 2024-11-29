@@ -82,7 +82,8 @@ export class PanierPage implements OnInit {
   ];
   products!: any;
 ngOnInit() {
-  this.livraisonDate.setDate(this.livraisonDate.getDate() + this.delai_de_livraison);
+  this.livraisonDate.setDate(this.livraisonDate.getDate()
+   + this.delai_de_livraison);
     console.log("date:",this.currentDate) 
   const storedCart = localStorage.getItem('cart');
   if (storedCart) {
@@ -99,15 +100,13 @@ onPointRelaisChange(event: any) {
   this.pointsRelais.forEach(pt=>{if (pt.nom ==selectedPointNom){
     this.pointchoisi =pt;
   }
-
   });
   console.log('Données de l\'adresse soumises :', this.pointchoisi);
   let navigationExtras: NavigationExtras = {
     state:{
         livraisonDate:this.livraisonDate,
         formulaire:this.pointchoisi   
-    }
-      
+    }   
   }
     console.log(this.pointchoisi);
     this.router.navigate(['/commande'],navigationExtras);
@@ -115,13 +114,14 @@ onPointRelaisChange(event: any) {
 }
 
 onDeleteProduitFromCart(productId: number) {
-  this.products = this.products.filter((product: any) => product.id !== productId);
-
-  localStorage.setItem('cart', JSON.stringify(this.products));
-
-  console.log('Produit supprimé, nouveau panier:', this.products);
+  this.products = this.products.filter((product:
+     any) => 
+    product.id !== productId);
+  localStorage.setItem('cart', JSON.
+    stringify(this.products));
+  console.log('Produit supprimé, nouveau panier:',
+     this.products);
 }
-
 onGoToproduitDetail(product: any) {
   this.router.navigate(['detail-produit'], {
     state: { produit: product }, 
