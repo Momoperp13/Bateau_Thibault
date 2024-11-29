@@ -66,7 +66,6 @@ export class CommandePage implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
   currentDate: Date = new Date();
   livraisonDate:Date = new Date();
-  date_livraison!:Date;
 
   formulaire!:
     {
@@ -91,7 +90,7 @@ ngOnInit() {
         'formulaire'
       ];
       this.livraisonDate = this.router.getCurrentNavigation()?.extras.state?.[
-        'currentDate'
+        'livraisonDate'
       ];
     }
   });

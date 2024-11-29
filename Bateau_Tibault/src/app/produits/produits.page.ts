@@ -32,7 +32,8 @@ export class ProduitsPage implements OnInit {
     }
   );
   }  
-  onLoadProduit(produit:{id: number, name:String, prix : number, image:String}){
+  onLoadProduit(produit:{id: number, name:String, 
+    prix : number, image:String}){
     
     let navigationExtras: NavigationExtras = {
       state:{
@@ -44,7 +45,8 @@ export class ProduitsPage implements OnInit {
   }
   filterItems() {
     this.filteredItems = this.produitsList.filter(produit=>
-      produit.name.toLowerCase().includes(this.searchText.toLowerCase())
+      produit.name.toLowerCase().includes(
+        this.searchText.toLowerCase())
     );
   }
   goToCart() {

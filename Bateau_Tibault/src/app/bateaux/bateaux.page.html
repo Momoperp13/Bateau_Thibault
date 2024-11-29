@@ -8,6 +8,7 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
+  
   <ion-toolbar>
     <ion-searchbar  [(ngModel)]="searchText" 
     (ionInput)="filterItems()" debounce="500" show-clear-button="focus" placeholder="Rechercher..."></ion-searchbar>

@@ -5,17 +5,17 @@ ion-header {
 
 ion-toolbar {
   --background: #90CAF9;
+  color: white;
 }
 ion-searchbar{
-  background: white;
+  --background: white;
   width: 400px;
   border-radius: 30px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 2px;
   color: gray;
-
 }
 ion-content{
   --background: white;
@@ -98,8 +98,8 @@ h1{
     color: white;
 }
 .cart {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   color: white;
   margin-top: 20px;
 }
