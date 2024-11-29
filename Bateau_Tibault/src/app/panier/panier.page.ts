@@ -37,7 +37,6 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
   standalone: true,
   imports: [
     IonContent,
-    FormsModule,
     IonSelect,
     IonSelectOption,
     IonHeader,
@@ -82,9 +81,9 @@ export class PanierPage implements OnInit {
     { nom: 'Relais Pickup', numero:"58", rue:"Rue de l'Arbre Sec",code_postale: 75001, ville:"Paris", pays:"France"},
   ];
   products!: any;
-  selectedValue!:any;
 ngOnInit() {
-  this.livraisonDate.setDate(this.livraisonDate.getDate() + this.delai_de_livraison);
+  this.livraisonDate.setDate(this.livraisonDate.getDate()
+   + this.delai_de_livraison);
     console.log("date:",this.currentDate) 
   const storedCart = localStorage.getItem('cart');
   if (storedCart) {
@@ -97,43 +96,32 @@ ngOnInit() {
 }
 onPointRelaisChange(event: any) {
   const selectedPointNom = event.detail.value;
-  // event = null;
-  console.log("event",event.detail.value);
-  this.selectedValue = null;
   console.log('Point relais sélectionné :', selectedPointNom);
   this.pointsRelais.forEach(pt=>{if (pt.nom ==selectedPointNom){
     this.pointchoisi =pt;
   }
-  
-
   });
   console.log('Données de l\'adresse soumises :', this.pointchoisi);
   let navigationExtras: NavigationExtras = {
     state:{
         livraisonDate:this.livraisonDate,
         formulaire:this.pointchoisi   
-    }
-      
+    }   
   }
-  
-  console.log("selecectedvalue",this.selectedValue)
     console.log(this.pointchoisi);
-    if(this.products !=''){
-      this.router.navigate(['/commande'],navigationExtras);
-      
-    }
-    
+    this.router.navigate(['/commande'],navigationExtras);
   
 }
 
 onDeleteProduitFromCart(productId: number) {
-  this.products = this.products.filter((product: any) => product.id !== productId);
-
-  localStorage.setItem('cart', JSON.stringify(this.products));
-
-  console.log('Produit supprimé, nouveau panier:', this.products);
+  this.products = this.products.filter((product:
+     any) => 
+    product.id !== productId);
+  localStorage.setItem('cart', JSON.
+    stringify(this.products));
+  console.log('Produit supprimé, nouveau panier:',
+     this.products);
 }
-
 onGoToproduitDetail(product: any) {
   this.router.navigate(['detail-produit'], {
     state: { produit: product }, 

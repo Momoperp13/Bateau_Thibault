@@ -30,10 +30,8 @@ export class DetailProduitPage implements OnInit {
   ngOnInit() {
     
     this.route.queryParams.subscribe(params => {
-      if(this.router.getCurrentNavigation()?.
-      extras.state){
-        this.produit = this.router.getCurrentNavigation()?.
-        extras.state?.['produit'];
+      if(this.router.getCurrentNavigation()?.extras.state){
+        this.produit = this.router.getCurrentNavigation()?.extras.state?.['produit'];
       }
     })
 
@@ -59,10 +57,8 @@ export class DetailProduitPage implements OnInit {
       quantite: this.quantite,
       total:produit.prix*this.quantite,
     };
-    const cart = JSON.parse(localStorage.
-      getItem('cart') || '[]');
-    const existingProductIndex = cart.
-    findIndex((p: any) => p.id === produit.id);
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingProductIndex = cart.findIndex((p: any) => p.id === produit.id);
 
   if (existingProductIndex > -1) {
    
