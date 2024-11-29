@@ -1,9 +1,11 @@
 <ion-header>
-  
+
   <ion-toolbar>
     <ion-buttons slot="start" (click)="onGoToProduits()">
       <ion-icon src="assets/icon/arrow-back.svg" class="custom-icon" name="arrow-back" size="large"></ion-icon>
-      <span class="costum-title"><h1>Panier</h1></span>
+      <span class="costum-title">
+        <h1>Panier</h1>
+      </span>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -36,7 +38,6 @@
       </ion-item>
     </ion-card>
   </div>
-
   <div class="button-container">
     <ion-row>
       <!-- Premier bouton pour Valider le panier -->
@@ -45,18 +46,18 @@
           Valider le panier
         </ion-button>
       </ion-col>
-
+  
       <!-- Deuxième bouton pour Choisir un point d'intérêt -->
       <ion-col size="6">
         <ion-button expand="block" class="custom-button">Choisir un point relais
-        
-        <ion-select  (ionChange)="onPointRelaisChange($event)">
-          <ion-select-option *ngFor="let point of pointsRelais" [value]="point.nom">
-            {{ point.nom }}
-          </ion-select-option>
-        </ion-select>
-      </ion-button>
+  
+          <ion-select [(ngModel)]="selectedValue" (ionChange)="onPointRelaisChange($event)">
+            <ion-select-option *ngFor="let point of pointsRelais" [value]="point.nom">
+              {{ point.nom }}
+            </ion-select-option>
+          </ion-select>
+        </ion-button>
       </ion-col>
     </ion-row>
   </div>
-</ion-content>
+  </ion-content>
